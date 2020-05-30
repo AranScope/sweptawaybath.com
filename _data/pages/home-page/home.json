@@ -17,7 +17,7 @@
         "left": {
           "include_coverage_map": true,
           "title": "With Great Coverage",
-          "text": "a"
+          "text": ""
         },
         "right": {
           "include_booking_button": false,
