@@ -7,40 +7,10 @@ import Quote from "../components/quote";
 import Header from "../components/header";
 import Section from "../components/description"
 import MapCoverage from "../components/mapCoverage"
-import {graphql} from "gatsby";
+import {graphql, StaticQuery} from "gatsby";
 import Container from "../components/container";
 
-
-const IndexPage = ({
-                       data: {
-                           site,
-                       },
-                   }) => {
-
-    return (
-        <Layout>
-            <Helmet>
-                <title>{site.siteMetadata.title}</title>
-                <meta name="description" content={site.siteMetadata.description}/>
-            </Helmet>
-            <Header
-                className={"overflow-x-hidden"}
-                imageUrl={"https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
-                <Navigation/>
-                <Quote/>
-            </Header>
-
-            <Container>
-                <Section/>
-                <MapCoverage/>
-            </Container>
-        </Layout>
-    )
-}
-
-export default IndexPage
-
-export const pageQuery = graphql`
+const pageQuery = graphql`
     query indexPageQuery {
         site {
             siteMetadata {
@@ -48,5 +18,66 @@ export const pageQuery = graphql`
                 description
             }
         }
+        allHomePageJson {
+            edges {
+                node {
+                    header {
+                        alert {
+                            badge
+                            text
+                        }
+                        title
+                        background_image
+                    }
+                }
+            }
+        }
+
+        allTestimonialsJson {
+            edges {
+                node {
+                    customer_name
+                    date
+                    link
+                    body
+                    featured
+                }
+            }
+        }
     }
 `
+
+const IndexPage = () => {
+    return (
+        <StaticQuery query={pageQuery} render={data => {
+            let testimonials = data.allTestimonialsJson.edges.map(e => e.node).filter(t => t.featured)
+            let i = Math.floor(Math.random() * testimonials.length)
+            let randomTestimonial = testimonials[i]
+
+            console.log(randomTestimonial)
+            return (
+                <Layout>
+                    <Helmet>
+                        <title>{data.site.siteMetadata.title}</title>
+                        <meta name="description" content={data.site.siteMetadata.description}/>
+                    </Helmet>
+                    <Header
+                        className={"overflow-x-hidden"}
+                        imageUrl={data.allHomePageJson.edges[0].node.header.background_image}>
+                        <Navigation title={data.allHomePageJson.edges[0].node.header.title}/>
+                        <Quote body={randomTestimonial.body} author={randomTestimonial.customer_name}/>
+                    </Header>
+
+                    <Container>
+                        <Section/>
+                        <MapCoverage/>
+                    </Container>
+                </Layout>
+            );
+        }}/>
+    )
+}
+
+export default IndexPage
+
+

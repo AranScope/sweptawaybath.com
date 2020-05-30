@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {Link} from "gatsby"
 import Hamburger from "./hamburger"
 
-export default () => {
+export default ({title}) => {
     const [menuOpen, setMenuOpen] = useState(false)
     const [menuHidden, setMenuHidden] = useState(true)
 
@@ -24,7 +24,8 @@ export default () => {
                         </g>
                     </g>
                 </svg>
-                <Link to={"/"}><span className="text-gray-300 font-semibold text-2xl hover:text-white">Swept Away</span></Link>
+                <Link to={"/"}><span
+                    className="text-gray-300 font-semibold text-2xl hover:text-white">{title}</span></Link>
             </div>
 
             <Hamburger active={menuOpen} onClick={() => {

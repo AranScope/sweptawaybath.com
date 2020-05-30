@@ -1,6 +1,7 @@
 Finish blog overview
 Pricing overview
 Make individual post theme
+Gatsby image for blog post
 Make book now page
 Make services page
 Get the hamburger working

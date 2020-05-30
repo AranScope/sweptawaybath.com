@@ -8,10 +8,10 @@ public_folder: /assets
 
 collections:
   - name: settings
-    label: Settings
+    label: Site-Wide Settings
     files:
-      - name: config
-        label: Config
+      - name: metadata
+        label: Metadata (Title, keywords etc.)
         file: site-meta-data.json
         fields:
           - widget: string
@@ -27,22 +27,52 @@ collections:
             label: Description
             default: ''
             required: false
+          - widget: list
+            name: keywords
+            label: Keywords
+            minimize_collapsed: true
+            field:
+              widget: string
+              name: keyword
+              label: Keyword
+
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home
+        file: _data/pages/home-page/home.json
+        create: true
+        fields:
           - widget: object
-            name: home
-            label: Homepage Options
+            name: header
+            label: Header
             fields:
+              - widget: object
+                name: alert
+                label: Alert
+                fields:
+                  - widget: string
+                    name: badge
+                    label: Badge
+                  - widget: string
+                    name: text
+                    label: Text
               - widget: string
                 name: title
                 label: Title
-                default: ''
-                required: false
-              - widget: markdown
-                name: description
-                label: Description
-                default: ''
-                required: false
+                required: true
+              - widget: image
+                name: background_image
+                label: Background Image
+                required: true
+                media_library:
+                  config:
+                    multiple: false
+                hint: Use a high resolution image, as this takes up the full width of the screen
+
   - name: blog
-    label: Blog
+    label: Blog Posts
     folder: _data/blog
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true
@@ -73,3 +103,32 @@ collections:
           config:
             multiple: false
       - { name: body, label: Body, widget: markdown }
+
+  - name: testimonials
+    label: Customer Testimonials
+    folder: _data/testimonials
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    create: true
+    extension: json
+    fields:
+      - label: When did the customer leave the review?
+        name: date
+        widget: datetime
+        hint: If you don't know, guess, or leave it blank
+      - label: What did the customer say?
+        name: body
+        widget: string
+        required: true
+      - label: What is the customer's name?
+        name: customer-name
+        widget: string
+        required: true
+      - label: Link to the review
+        name: link
+        widget: string
+        hint: e.g. Google reviews, Yahoo etc. If there isn't one, leave it blank
+      - label: Feature on home page?
+        name: featured
+        widget: boolean
+        default: false
+        hint: It's best to feature short reviews e.g. one sentence, so they don't take up too much space on the home page
