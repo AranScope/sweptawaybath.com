@@ -10,12 +10,10 @@ const mapStyles = {
     top: 0
 };
 
-export default GoogleApiWrapper({
-    apiKey: 'AIzaSyBv1I7D_acWcsAOxNyTUw5dZsk5_9MpFv4'
-})(props => (
+const RenderMap = props => (
     <SideBySide>
-        <>
-            <h1 className="text-gray-900 text-5xl leading-tight"
+        <div className={"map-component"}>
+            <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight"
                 style={{fontFamily: "Nunito Sans"}}>Covering
                 20 miles around Bath</h1>
             <p className="text-gray-600 text-xl font-serif leading-loose">Based in Bath, we cover a 20 mile
@@ -44,6 +42,10 @@ export default GoogleApiWrapper({
                         fillOpacity={0.1}/>
                 </Map>
             </div>
-        </>
+        </div>
     </SideBySide>
-));
+)
+
+export default GoogleApiWrapper({
+    apiKey: 'AIzaSyBv1I7D_acWcsAOxNyTUw5dZsk5_9MpFv4'
+})(RenderMap)

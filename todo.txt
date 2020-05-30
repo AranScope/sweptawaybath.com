@@ -10,4 +10,5 @@ Make it all responsive
 Make banner link to specific blog post
 Migrate all blog posts
 SEO
+Sign up for reminders
 Copy
