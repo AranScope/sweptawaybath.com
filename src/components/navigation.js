@@ -4,6 +4,7 @@ import Hamburger from "./hamburger"
 
 export default () => {
     const [menuOpen, setMenuOpen] = useState(false)
+    const [menuHidden, setMenuHidden] = useState(true)
 
     return (
         <nav className="flex justify-between items-center">
@@ -27,7 +28,17 @@ export default () => {
             </div>
 
             <Hamburger active={menuOpen} onClick={() => {
+                if (menuOpen) {
+                    // menu is being shut
+                    setTimeout(() => {
+                        setMenuHidden(true)
+                    }, 100)
+                } else {
+                    setMenuHidden(false)
+                }
+
                 setMenuOpen(!menuOpen)
+
             }}/>
 
 
@@ -52,7 +63,7 @@ export default () => {
                 </li>
             </ul>
 
-            <ul className={`md:hidden ${menuOpen ? `` : `menu-hidden`}`} id={"mobile-nav"}>
+            <ul className={`md:hidden ${menuOpen ? `` : `menu-hidden`} ${menuHidden && 'hidden'}`} id={"mobile-nav"}>
                 <li className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/">HOME</Link>
                 </li>

@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    overflow-x: hidden;
+}
+
 .bigquote {
     position: relative;
 }
@@ -22,9 +26,7 @@
 }
 
 #mobile-nav {
-    /*transform: translateX(0);*/
-
-    transition: width 0.2s, opacity 0.2s, transform 0.2s ease;
+    transition: opacity 0.1s ease, transform 0.1s ease;
     position: fixed; /* Stay in place */
     top: 0;
     left: 0;
@@ -48,7 +50,6 @@
 .menu-hidden {
     transform: translateX(101vw);
     opacity: 0 !important;
-    width: 0 !important;
 }
 
 .blog-post-content {
