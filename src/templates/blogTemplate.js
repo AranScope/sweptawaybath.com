@@ -2,6 +2,9 @@ import React from "react"
 import Helmet from 'react-helmet';
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Header from "../components/header";
+import Navigation from "../components/navigation";
+import HeaderTitle from "../components/headerTitle";
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -16,23 +19,15 @@ export default function Template({
         <meta name="description" content={frontmatter.metaDescription} />
       </Helmet>
       <div className="blog-post-container">
-        <article className="post">
-          
-          {!frontmatter.thumbnail && (
-            <div className="post-thumbnail">
-              <h1 className="post-title">{frontmatter.title}</h1>
-              <div className="post-meta">{frontmatter.date}</div>
-            </div>
-          )}
-          {!!frontmatter.thumbnail && (
-            <div className="post-thumbnail" style={{backgroundImage: `url(${frontmatter.thumbnail})`}}>
-              <h1 className="post-title">{frontmatter.title}</h1>
-              <div className="post-meta">{frontmatter.date}</div>
-            </div>
-          )}
+        <Header imageUrl={frontmatter.thumbnail || "https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
+          <Navigation/>
+          <HeaderTitle>{frontmatter.title}</HeaderTitle>
+        </Header>
+
+        <article className="grids container mx-auto p-5 md:px-40 md:py-20">
           <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
+              className="blog-post-content text-2xl"
+              dangerouslySetInnerHTML={{ __html: html }}
           />
         </article>
       </div>

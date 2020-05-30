@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,11 +17,11 @@
     font-size: 6em;
     content: open-quote;
     -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
-    color: rgba(0,0,0,0);
+    color: rgba(0, 0, 0, 0);
     line-height: 1ch;
 }
 
-.active-fullscreen{
+.active-fullscreen {
     position: fixed; /* Stay in place */
     top: 0;
     left: 0;
@@ -36,4 +37,64 @@
     overflow: hidden;
     transition: all 0.4s ease;
     background-color: #2d3748;
+}
+
+.blog-post-content {
+
+}
+
+.blog-post-content h1 {
+    @apply font-bold;
+    @apply text-5xl;
+    /*@apply md:text-5xl;*/
+}
+
+.blog-post-content h2 {
+    @apply font-bold;
+    @apply text-3xl;
+    /*@apply md:text-5xl;*/
+}
+
+.blog-post-content h3 {
+    @apply font-bold;
+    @apply text-2xl;
+    /*@apply md:text-5xl;*/
+}
+
+.blog-post-content p, .blog-post-content li {
+    /*font-family: "Vollkorn", Palatino, Times;*/
+    color: hsl(0, 0%, 37%);
+    font: 1em "Merriweather", Palatino, Times;
+    font-weight: lighter;
+    @apply leading-loose;
+}
+
+.blog-post-content ol {
+    list-style-type: decimal;
+}
+
+.blog-post-content p {
+    @apply py-6;
+}
+
+.blog-post-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+}
+
+.text-shadow-md {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.text-shadow-lg {
+    text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.text-shadow-none {
+    text-shadow: none;
 }

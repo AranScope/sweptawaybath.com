@@ -1,0 +1,12 @@
+Finish blog overview
+Pricing overview
+Make individual post theme
+Make book now page
+Make services page
+Make reviews page
+Connect all of it to contentful
+Make it all responsive
+Make banner link to specific blog post
+Migrate all blog posts
+SEO
+Copy

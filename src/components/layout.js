@@ -22,7 +22,7 @@ export default ({ children }) => {
   )
   return (
     <div className="site-wrapper">
-        <Alert/>
+        <Alert link={"/coronavirus"}/>
       {children}
       <Footer/>
     </div>

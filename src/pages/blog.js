@@ -25,11 +25,11 @@ export default ({
                 <title></title>
                 <meta name="description" content={"Contact page of "}/>
             </Helmet>
-            <Header>
+            <Header imageUrl={"https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
                 <Navigation/>
                 <HeaderTitle>Thoughts about things</HeaderTitle>
             </Header>
-            <div className="grids">
+            <div className="grids container mx-auto grid grid-cols-2 gap-6 my-6">
                 {Posts}
             </div>
         </Layout>
