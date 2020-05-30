@@ -3,6 +3,7 @@ Pricing overview
 Make individual post theme
 Make book now page
 Make services page
+Get the hamburger working
 Make reviews page
 Connect all of it to contentful
 Make it all responsive

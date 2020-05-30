@@ -5,7 +5,7 @@ import PostLink from "../components/post-link"
 import Navigation from "../components/navigation";
 import Quote from "../components/quote";
 import Header from "../components/header";
-import Section from "../components/section"
+import Section from "../components/description"
 import MapCoverage from "../components/mapCoverage"
 import {graphql} from "gatsby";
 import Container from "../components/container";
@@ -30,10 +30,8 @@ const IndexPage = ({
             </Header>
 
             <Container>
-                {/*<div className={"mx-5 pt-8 md:px-10 md:pt-16"}>*/}
                 <Section/>
                 <MapCoverage/>
-                {/*</div>*/}
             </Container>
         </Layout>
     )
