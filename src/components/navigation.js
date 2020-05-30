@@ -6,7 +6,7 @@ export default () => {
     const [menuOpen, setMenuOpen] = useState(false)
 
     return (
-        <nav className="flex justify-between items-center pt-10">
+        <nav className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0 text-white">
                 <svg className="fill-current h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" id="Capa_1"
                      enableBackground="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512">
@@ -26,7 +26,7 @@ export default () => {
                 <Link to={"/"}><span className="text-gray-300 font-semibold text-2xl hover:text-white">Swept Away</span></Link>
             </div>
 
-            <Hamburger onClick={() => {
+            <Hamburger active={menuOpen} onClick={() => {
                 setMenuOpen(!menuOpen)
             }}/>
 

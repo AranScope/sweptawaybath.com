@@ -24,7 +24,7 @@ export default function Template({
           <HeaderTitle>{frontmatter.title}</HeaderTitle>
         </Header>
 
-        <article className="grids container mx-auto p-5 md:px-40 md:py-20">
+        <article className="container md:mx-auto p-5 md:py-20">
           <div
               className="blog-post-content text-2xl"
               dangerouslySetInnerHTML={{ __html: html }}
