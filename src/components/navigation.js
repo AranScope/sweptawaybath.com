@@ -19,7 +19,7 @@ export default (props) => (
                     </g>
                 </g>
             </svg>
-            <span className="text-gray-300 font-semibold text-2xl">Swept Away</span>
+            <Link to={"/"}><span className="text-gray-300 font-semibold text-2xl hover:text-white">Swept Away</span></Link>
         </div>
 
         <button id="hamburger-button"
