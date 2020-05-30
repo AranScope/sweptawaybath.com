@@ -1,13 +1,9 @@
 import React from "react"
 import Helmet from 'react-helmet';
 import Layout from "../components/layout"
-import PostLink from "../components/post-link"
 import PricingCard from "../components/PricingCard";
 import Navigation from "../components/navigation";
-import Quote from "../components/quote";
 import Header from "../components/header";
-import Section from "../components/section"
-import Section2 from "../components/section2"
 import HeaderTitle from "../components/headerTitle"
 import {graphql} from "gatsby";
 
