@@ -13,11 +13,7 @@ const mapStyles = {
 const RenderMap = props => (
     <SideBySide>
         <div className={"map-component"}>
-            <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight"
-                style={{fontFamily: "Nunito Sans"}}>Covering
-                20 miles around Bath</h1>
-            <p className="text-gray-600 text-xl font-serif leading-loose">Based in Bath, we cover a 20 mile
-                radius, including Bristol, Chippenham, Trowbridge and more.</p>
+            <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold" style={{fontFamily: "Nunito Sans"}}>With Great Coverage</h1>
             <div className="relative" style={{height: "40rem"}}>
                 <Map
                     style={mapStyles}
@@ -43,6 +39,10 @@ const RenderMap = props => (
                 </Map>
             </div>
         </div>
+        <>
+            <h2><a className="text-gray-900 md:text-gray-700 text-2xl leading-tight font-extrabold md:font-semibold  md:text-base md:uppercase" style={{fontFamily: "Nunito Sans"}}>Covering 20 miles around Bath</a></h2><br/>
+            <p className="text-gray-600 text-xl font-serif leading-loose">Based in Bath, we cover a 20 mile radius, including Bristol, Chippenham, Trowbridge and more.</p>
+        </>
     </SideBySide>
 )
 
