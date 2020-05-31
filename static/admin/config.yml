@@ -10,6 +10,21 @@ collections:
   - name: settings
     label: Site-Wide Settings
     files:
+      - name: personal-details
+        label: Personal details (name, profile picture etc.)
+        file: _data/personal/personal.json
+        fields:
+          - widget: string
+            name: first-name
+            label: First Name
+            required: true
+          - widget: image
+            name: profile-image
+            label: Profile Image
+            required: false
+            media_library:
+              config:
+                multiple: false
       - name: metadata
         label: Metadata (Title, keywords etc.)
         file: site-meta-data.json
@@ -39,6 +54,72 @@ collections:
   - name: pages
     label: Pages
     files:
+      - name: prices
+        label: Prices
+        file: _data/pages/prices-page/prices.json
+        create: true
+        fields:
+          - widget: object
+            name: prices
+            label: Prices
+            fields:
+              - widget: object
+                name: regular-sweep
+                label: A single, regular sweep
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                  - widget: text
+                    name: description
+                    label: Description
+                  - widget: number
+                    name: price
+                    label: £ Price
+                    hint: How much should a single sweep cost?
+                    min: 0
+                    step: 5
+                min: 0
+                step: 5
+              - widget: list
+                name: everything-else-paid
+                label: The other paid stuff
+                hint: The list of everything else that is paid
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                  - widget: text
+                    name: description
+                    label: Description
+                  - widget: select
+                    name: price-type
+                    label: Price type
+                    options:
+                      - value: per-chimney
+                        label: Per Chimney
+                      - value: per-job
+                        label: Per Job
+                      - value: per-hour
+                        label: Per Hour
+                  - widget: number
+                    name: price
+                    label: £ Price
+                    hint: How much should this item cost?
+                    min: 0
+                    step: 5
+              - widget: list
+                name: everything-else-free
+                label: The free stuff
+                hint: The list of everything that is free
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                  - widget: text
+                    name: description
+                    label: Description
+
       - name: home
         label: Home
         file: _data/pages/home-page/home.json

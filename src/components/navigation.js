@@ -48,7 +48,7 @@ export default ({title}) => {
                     <Link to="/">HOME</Link>
                 </li>
                 <li className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
-                    <Link to="/services">SERVICES</Link>
+                    <Link to="/prices">PRICES</Link>
                 </li>
                 <li className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/blog">BLOG</Link>
@@ -69,7 +69,7 @@ export default ({title}) => {
                     <Link to="/">HOME</Link>
                 </li>
                 <li className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
-                    <Link to="/services">SERVICES</Link>
+                    <Link to="/prices">PRICES</Link>
                 </li>
                 <li className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/blog">BLOG</Link>

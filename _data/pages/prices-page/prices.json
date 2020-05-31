@@ -1,5 +1,10 @@
 {
   "prices": {
+    "regular-sweep": {
+      "title": "Regular sweep",
+      "price": 55,
+      "description": "A single, regular sweep"
+    },
     "everything-else-paid": [
       {
         "price-type": "per-chimney",
@@ -20,7 +25,6 @@
         "description": "Most nest removal is completed within a single hour."
       }
     ],
-    "regular-sweep": 55,
     "everything-else-free": [
       {
         "title": "Compliance survey",
