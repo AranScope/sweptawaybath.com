@@ -1,0 +1,3 @@
+---
+category: Stoves and Woodburners
+---
