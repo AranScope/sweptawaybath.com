@@ -1,10 +1,11 @@
 ---
 template: BlogPost
+category: Coronavirus
 path: /coronavirus
 date: 2020-05-29T16:42:57.192Z
 title: How we're reacting to the Coronavirus
 metaDescription: ""
-thumbnail: 
+thumbnail: null
 ---
 
 Please inform us if anyone in your household is displaying Covid19 symptoms or if anyone in your home is self isolating
