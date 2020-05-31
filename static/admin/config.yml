@@ -26,7 +26,7 @@ collections:
               config:
                 multiple: false
       - name: metadata
-        label: Metadata (Title, keywords etc.)
+        label: Metadata (Title etc.)
         file: site-meta-data.json
         fields:
           - widget: string
@@ -37,19 +37,6 @@ collections:
             name: siteUrl
             label: Website URL
             required: true
-          - widget: text
-            name: description
-            label: Description
-            default: ''
-            required: false
-          - widget: list
-            name: keywords
-            label: Keywords
-            minimize_collapsed: true
-            field:
-              widget: string
-              name: keyword
-              label: Keyword
 
   - name: pages
     label: Pages
@@ -125,6 +112,14 @@ collections:
         file: _data/pages/home-page/home.json
         create: true
         fields:
+          - widget: object
+            name: metadata
+            label: Metadata
+            fields:
+              - widget: text
+                name: description
+                label: Description
+                required: true
           - widget: object
             name: header
             label: Header

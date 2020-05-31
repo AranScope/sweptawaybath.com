@@ -51,7 +51,7 @@ export default () => (
                 <Container>
                     {
                         groupedByCategory.map(group => (
-                            <section>
+                            <section key={group.category}>
                                 <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold"
                                     style={{fontFamily: "Nunito Sans"}}>{group.category}</h1>
                                 <div className="container mx-auto md:grid md:grid-cols-2 md:gap-6 my-6">

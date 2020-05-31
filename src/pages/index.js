@@ -14,33 +14,31 @@ const pageQuery = graphql`
         site {
             siteMetadata {
                 title
-                description
             }
         }
-        allHomePageJson {
-            edges {
-                node {
-                    header {
-                        alert {
-                            badge
-                            text
-                        }
-                        background_image
+        homePageJson {
+            metadata {
+                description
+            }
+            header {
+                alert {
+                    badge
+                    text
+                }
+                background_image
+                title
+            }
+            body {
+                sections {
+                    left {
+                        include_coverage_map
+                        text
                         title
                     }
-                    body {
-                        sections {
-                            left {
-                                include_coverage_map
-                                text
-                                title
-                            }
-                            right {
-                                include_booking_button
-                                text
-                                title
-                            }
-                        }
+                    right {
+                        include_booking_button
+                        text
+                        title
                     }
                 }
             }
@@ -67,24 +65,24 @@ const IndexPage = () => {
             let i = Math.floor(Math.random() * testimonials.length)
             let randomTestimonial = testimonials[i]
 
-            console.log(data.allHomePageJson.edges[0].node.body.sections)
             return (
                 <Layout>
                     <Helmet>
                         <title>{data.site.siteMetadata.title}</title>
-                        <meta name="description" content={data.site.siteMetadata.description}/>
+                        <meta name="description" content={data.homePageJson.metadata.description}/>
                     </Helmet>
                     <Header
                         className={"overflow-x-hidden"}
-                        imageUrl={data.allHomePageJson.edges[0].node.header.background_image}>
-                        <Navigation title={data.allHomePageJson.edges[0].node.header.title}/>
+                        imageUrl={data.homePageJson.header.background_image}>
+                        <Navigation title={data.homePageJson.header.title}/>
                         <Quote body={randomTestimonial.body} author={randomTestimonial.customer_name}/>
                     </Header>
 
                     <Container>
                         {
-                            data.allHomePageJson.edges[0].node.body.sections.map(s =>
+                            data.homePageJson.body.sections.map(s =>
                                 <Section
+                                    key={s.left.title}
                                     leftTitle={s.left.title}
                                     leftBody={s.left.text}
                                     leftIncludesMap={s.left.include_coverage_map}

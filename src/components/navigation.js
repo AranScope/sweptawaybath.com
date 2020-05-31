@@ -44,19 +44,19 @@ export default ({title}) => {
 
 
             <ul className="md:flex md:flex-row items-center hidden">
-                <li className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="home" className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/">HOME</Link>
                 </li>
-                <li className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="prices" className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/prices">PRICES</Link>
                 </li>
-                <li className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="blog" className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/blog">BLOG</Link>
                 </li>
-                <li className="text-gray-300 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="reviews" className="text-gray-300 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/reviews">REVIEWS</Link>
                 </li>
-                <li>
+                <li key="book-now">
                     <button
                         className="bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
                         NOW
@@ -65,19 +65,19 @@ export default ({title}) => {
             </ul>
 
             <ul className={`md:hidden ${menuOpen ? `` : `menu-hidden`} ${menuHidden && 'hidden'}`} id={"mobile-nav"}>
-                <li className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="home" className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/">HOME</Link>
                 </li>
-                <li className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="prices" className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/prices">PRICES</Link>
                 </li>
-                <li className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="blog" className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/blog">BLOG</Link>
                 </li>
-                <li className="text-gray-800 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="reviews" className="text-gray-800 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/reviews">REVIEWS</Link>
                 </li>
-                <li>
+                <li key="book-now" >
                     <button
                         className="bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
                         NOW
