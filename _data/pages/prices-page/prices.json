@@ -15,7 +15,7 @@
       },
       {
         "title": "Nest removal",
-        "price-type": "per-chimney",
+        "price-type": "per-hour",
         "price": 30,
         "description": "Most nest removal is completed within a single hour."
       }
