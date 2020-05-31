@@ -112,6 +112,18 @@ collections:
                         name: include_booking_button
                         label: Include booking button?
                         default: false
+
+  - name: blog_categories
+    label: Blog Categories
+    folder: _data/blog-categories
+    extension: json
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - widget: string
+        name: category
+        label: Category Name
+
   - name: blog
     label: Blog Posts
     folder: _data/blog
@@ -124,6 +136,12 @@ collections:
           widget: hidden,
           default: BlogPost,
         }
+      - name: category
+        label: Category
+        widget: relation
+        collection: blog_categories
+        searchFields: [category]
+        valueField: category
       - name: path
         label: Path
         widget: string

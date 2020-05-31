@@ -7,6 +7,14 @@ import Header from "../components/header"
 import HeaderTitle from "../components/headerTitle"
 import PostLink from "../components/post-link";
 
+function groupByCategory(posts) {
+    // get the categ
+    const map = new Map();
+
+    for(let post of posts) {
+
+    }
+}
 
 export default ({
                     data: {
@@ -53,5 +61,6 @@ export const pageQuery = graphql`
                 }
             }
         }
+
     }
 `
