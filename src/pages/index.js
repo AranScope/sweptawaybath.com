@@ -5,8 +5,7 @@ import PostLink from "../components/post-link"
 import Navigation from "../components/navigation";
 import Quote from "../components/quote";
 import Header from "../components/header";
-import Section from "../components/description"
-import MapCoverage from "../components/mapCoverage"
+import Section from "../components/indexSection"
 import {graphql, StaticQuery} from "gatsby";
 import Container from "../components/container";
 
@@ -26,8 +25,22 @@ const pageQuery = graphql`
                             badge
                             text
                         }
-                        title
                         background_image
+                        title
+                    }
+                    body {
+                        sections {
+                            left {
+                                include_coverage_map
+                                text
+                                title
+                            }
+                            right {
+                                include_booking_button
+                                text
+                                title
+                            }
+                        }
                     }
                 }
             }
@@ -54,7 +67,7 @@ const IndexPage = () => {
             let i = Math.floor(Math.random() * testimonials.length)
             let randomTestimonial = testimonials[i]
 
-            console.log(randomTestimonial)
+            console.log(data.allHomePageJson.edges[0].node.body.sections)
             return (
                 <Layout>
                     <Helmet>
@@ -69,8 +82,17 @@ const IndexPage = () => {
                     </Header>
 
                     <Container>
-                        <Section/>
-                        <MapCoverage/>
+                        {
+                            data.allHomePageJson.edges[0].node.body.sections.map(s =>
+                                <Section
+                                    leftTitle={s.left.title}
+                                    leftBody={s.left.text}
+                                    leftIncludesMap={s.left.include_coverage_map}
+                                    rightTitle={s.right.title}
+                                    rightBody={s.right.text}
+                                    rightIncludesBookButton={s.right.include_booking_button}
+                                />)
+                        }
                     </Container>
                 </Layout>
             );

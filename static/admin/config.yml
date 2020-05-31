@@ -71,6 +71,47 @@ collections:
                     multiple: false
                 hint: Use a high resolution image, as this takes up the full width of the screen
 
+          - widget: object
+            name: body
+            label: Body
+            fields:
+              - widget: list
+                name: sections
+                label: sections
+                minimize_collapsed: true
+                fields:
+                  - widget: object
+                    name: left
+                    label: Left Side
+                    fields:
+                      - widget: string
+                        name: title
+                        label: Title
+                        required: true
+                      - widget: text
+                        name: text
+                        label: Text
+                        required: false
+                      - widget: boolean
+                        name: include_coverage_map
+                        label: Include coverage map?
+                        default: false
+                  - widget: object
+                    name: right
+                    label: Right Side
+                    fields:
+                      - widget: string
+                        name: title
+                        label: Title
+                        required: true
+                      - widget: text
+                        name: text
+                        label: Text
+                        required: false
+                      - widget: boolean
+                        name: include_booking_button
+                        label: Include booking button?
+                        default: false
   - name: blog
     label: Blog Posts
     folder: _data/blog
@@ -117,7 +158,7 @@ collections:
         hint: If you don't know, guess, or leave it blank
       - label: What did the customer say?
         name: body
-        widget: string
+        widget: text
         required: true
       - label: What is the customer's name?
         name: customer-name
