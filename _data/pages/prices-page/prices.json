@@ -1,0 +1,55 @@
+{
+  "prices": {
+    "everything-else-paid": [
+      {
+        "price-type": "per-chimney",
+        "title": "Camera survey",
+        "description": "A full camera survey, including a certificate and all relevant images shared after completion.",
+        "price": 30
+      },
+      {
+        "title": "Formal written report",
+        "description": "A formal written report, detailing the state of all chimneys swept",
+        "price-type": "per-job",
+        "price": 30
+      },
+      {
+        "title": "Nest removal",
+        "price-type": "per-chimney",
+        "price": 30,
+        "description": "Most nest removal is completed within a single hour."
+      }
+    ],
+    "regular-sweep": 55,
+    "everything-else-free": [
+      {
+        "title": "Compliance survey",
+        "description": "A survey"
+      },
+      {
+        "title": "Sweep certificates",
+        "description": "Some certificates"
+      },
+      {
+        "title": "Optional reminders",
+        "description": "Some reminders"
+      },
+      {
+        "title": "Door cord renewal",
+        "description": "Materials must be supplied by the customer"
+      },
+      {
+        "title": "Brick & baffle replacement",
+        "description": "Materials must be supplied by the customer"
+      },
+      {
+        "title": "Advice - Fuel, storage, appliance tips",
+        "description": "Some advice"
+      },
+      {
+        "title": "Children / Cats / Dogs / Pets engaged and entertained",
+        "description": "Some entertainment"
+      }
+    ]
+  }
+}
