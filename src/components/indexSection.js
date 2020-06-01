@@ -24,10 +24,11 @@ export default ({leftTitle, leftBody, leftIncludesMap, rightTitle, rightBody, ri
             )
             }
             {rightIncludesBookButton && (
-                <button
-                    className="border-solid border-2 border-orange-600 hover:bg-orange-600 hover:text-white text-orange-600 font-semibold py-4 my-8 px-8">BOOK
+                <a
+                    href={"/book"}
+                    className="pointer inline-block border-solid border-2 border-orange-600 hover:bg-orange-600 hover:text-white text-orange-600 font-semibold py-4 my-8 px-8">BOOK
                     NOW
-                </button>
+                </a>
             )}
         </>
     </SideBySide>

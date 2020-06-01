@@ -18,13 +18,21 @@ collections:
             name: first-name
             label: First Name
             required: true
-          - widget: image
+          - widget: object
             name: profile-image
             label: Profile Image
-            required: false
-            media_library:
-              config:
-                multiple: false
+            fields:
+              - widget: image
+                name: image
+                label: Image
+                required: false
+                media_library:
+                  config:
+                    multiple: false
+              - widget: string
+                name: alt
+                label: Alt Text
+                required: false
       - name: metadata
         label: Metadata (Title etc.)
         file: site-meta-data.json

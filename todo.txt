@@ -4,6 +4,7 @@ Make individual post theme
 Gatsby image for blog post
 Make book now page
 Make services page
+Autoprefixer
 Make reviews page
 Connect all of it to netlify cms
 Make banner link to specific blog post

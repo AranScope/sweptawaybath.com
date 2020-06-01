@@ -87,7 +87,10 @@ const pageQuery = graphql`
         }
 
         personalJson {
-            profile_image
+            profile_image {
+                image
+                alt
+            }
             first_name
         }
     }

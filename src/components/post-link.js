@@ -17,8 +17,7 @@ export default ({post, authorName, authorImage}) => (
                 </div>
                 <div className="flex items-center">
                     <img
-                        className="w-10 h-10 rounded-full mr-4" src={authorImage}
-                        alt={post.frontmatter.title + "- Featured Shot"}/>
+                        className="w-10 h-10 rounded-full mr-4" src={authorImage.image} alt={authorImage.alt}/>
                     <div className="text-sm">
                         <p className="text-gray-900 leading-none">{authorName}</p>
                         <p className="text-gray-600">{post.frontmatter.date}</p>

@@ -24,8 +24,8 @@ export default ({title}) => {
                         </g>
                     </g>
                 </svg>
-                <Link to={"/"}><span
-                    className="text-gray-300 font-semibold text-2xl hover:text-white">{title}</span></Link>
+                <Link to={"/"}><h1
+                    className="text-gray-300 font-semibold text-2xl hover:text-white leading-snug max-w-200px lg:max-w-unset">{title}</h1></Link>
             </div>
 
             <Hamburger active={menuOpen} onClick={() => {
@@ -44,40 +44,53 @@ export default ({title}) => {
 
 
             <ul className="md:flex md:flex-row items-center hidden">
-                <li key="home" className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="home"
+                    className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/">HOME</Link>
                 </li>
-                <li key="prices" className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="prices"
+                    className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/prices">PRICES</Link>
                 </li>
-                <li key="blog" className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="blog"
+                    className="text-gray-300 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/blog">BLOG</Link>
                 </li>
-                <li key="reviews" className="text-gray-300 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="reviews"
+                    className="text-gray-300 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/reviews">REVIEWS</Link>
                 </li>
                 <li key="book-now">
-                    <button
-                        className="bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
+                    <a
+                        href={"/book"}
+                        className="pointer inline-block bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
                         NOW
-                    </button>
+                    </a>
+                    {/*<button*/}
+                    {/*    className="bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK*/}
+                    {/*    NOW*/}
+                    {/*</button>*/}
                 </li>
             </ul>
 
             <ul className={`md:hidden ${menuOpen ? `` : `menu-hidden`} ${menuHidden && 'hidden'}`} id={"mobile-nav"}>
-                <li key="home" className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="home"
+                    className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/">HOME</Link>
                 </li>
-                <li key="prices" className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="prices"
+                    className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/prices">PRICES</Link>
                 </li>
-                <li key="blog" className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="blog"
+                    className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/blog">BLOG</Link>
                 </li>
-                <li key="reviews" className="text-gray-800 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                <li key="reviews"
+                    className="text-gray-800 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
                     <Link to="/reviews">REVIEWS</Link>
                 </li>
-                <li key="book-now" >
+                <li key="book-now">
                     <button
                         className="bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
                         NOW
