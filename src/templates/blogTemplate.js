@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import Helmet from 'react-helmet';
 import {graphql} from "gatsby"
 import Layout from "../components/layout"
@@ -12,6 +12,9 @@ export default function Template({
     const {site, markdownRemark} = data // data.markdownRemark holds your post data
     const {siteMetadata} = site
     const {frontmatter, html} = markdownRemark
+
+    const [copied, setCopied] = useState(false)
+
     return (
         <Layout>
             <Helmet>
@@ -43,14 +46,17 @@ export default function Template({
                                         })
                                             .catch(console.error);
                                     } else {
-                                        // fallback
+                                        setCopied(true)
+                                        setTimeout(() => {
+                                            setCopied(false)
+                                        }, 5000)
                                     }
                                 }}
                                 className="flex items-center shadow-md bg-gray-100 hover:bg-white text-gray-800 py-2 px-6 mx-2">
               <span className={"font-bold text-2xl"}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                           width="24" height="24"><path className="fill-current"
                                                                                        d="M19.48 13.03A4 4 0 0 1 16 19h-4a4 4 0 1 1 0-8h1a1 1 0 0 0 0-2h-1a6 6 0 1 0 0 12h4a6 6 0 0 0 5.21-8.98L21.2 12a1 1 0 1 0-1.72 1.03zM4.52 10.97A4 4 0 0 1 8 5h4a4 4 0 1 1 0 8h-1a1 1 0 0 0 0 2h1a6 6 0 1 0 0-12H8a6 6 0 0 0-5.21 8.98l.01.02a1 1 0 1 0 1.72-1.03z"/></svg></span>
-                                <span className={"ml-4"}>{typeof window !== "undefined" && window.navigator.share ? "SHARE" : "COPY"}</span>
+                                <span className={"ml-4"}>{typeof window !== "undefined" && window.navigator.share ? "SHARE" : copied ? "COPIED" : "COPY"}</span>
                             </a>
                         </div>
                     </div>
