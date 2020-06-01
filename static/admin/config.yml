@@ -114,6 +114,10 @@ collections:
                   - widget: text
                     name: description
                     label: Description
+                  - widget: boolean
+                    name: new
+                    label: Is this a new free thing?
+                    default: false
 
       - name: home
         label: Home

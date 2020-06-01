@@ -28,31 +28,38 @@
     "everything-else-free": [
       {
         "title": "Compliance survey",
-        "description": "A survey"
+        "description": "A survey",
+        "new": false
       },
       {
         "title": "Sweep certificates",
-        "description": "Some certificates"
+        "description": "Some certificates",
+        "new": false
       },
       {
         "title": "Optional reminders",
-        "description": "Some reminders"
+        "description": "Some reminders",
+        "new": true
       },
       {
         "title": "Door cord renewal",
-        "description": "Materials must be supplied by the customer"
+        "description": "Materials must be supplied by the customer",
+        "new": false
       },
       {
         "title": "Brick & baffle replacement",
-        "description": "Materials must be supplied by the customer"
+        "description": "Materials must be supplied by the customer",
+        "new": false
       },
       {
         "title": "Advice - Fuel, storage, appliance tips",
-        "description": "Some advice"
+        "description": "Some advice",
+        "new": false
       },
       {
         "title": "Children / Cats / Dogs / Pets engaged and entertained",
-        "description": "Some entertainment"
+        "description": "Some entertainment",
+        "new": false
       }
     ]
   }

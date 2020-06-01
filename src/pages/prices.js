@@ -19,7 +19,11 @@ const Prices = ({prices}) => (
                 prices.everything_else_free.map(item => (
                     <>
                         <li className={"flex items-center"}><Tick/> <p
-                            className={"ml-2 text-gray-800"}>{item.title} - {item.description}</p></li>
+                            className={"ml-2 text-gray-800"}>{item.title} - {item.description}</p> {item.new && (
+                            <span
+                                className="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+                        )
+                        }</li>
                     </>
                 ))
             }
@@ -70,6 +74,7 @@ export const pageQuery = graphql`
                 everything_else_free {
                     title
                     description
+                    new
                 }
                 everything_else_paid {
                     title
