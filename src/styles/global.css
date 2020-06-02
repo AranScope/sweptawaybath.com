@@ -25,6 +25,10 @@ body {
     line-height: 1ch;
 }
 
+.hidden {
+    display: none !important;
+}
+
 #mobile-nav {
     transition: opacity 0.1s ease, transform 0.1s ease;
     position: fixed; /* Stay in place */
@@ -35,10 +39,6 @@ body {
     z-index: 1; /* Sit on top */
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 
     background-color: rgba(255, 255, 255, 0.9);

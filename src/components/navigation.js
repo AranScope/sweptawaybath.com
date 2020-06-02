@@ -9,7 +9,8 @@ export default ({title}) => {
     return (
         <nav className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0 text-white">
-                <svg className="hidden md:block fill-current h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" id="Capa_1"
+                <svg className="hidden md:block fill-current h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg"
+                     id="Capa_1"
                      enableBackground="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512">
                     <g>
                         <g>
@@ -25,7 +26,8 @@ export default ({title}) => {
                     </g>
                 </svg>
                 <Link to={"/"}><h1
-                    className="text-gray-300 font-semibold text-2xl hover:text-white leading-snug max-w-200px lg:max-w-unset">{title}</h1></Link>
+                    className="text-gray-300 font-semibold text-2xl hover:text-white leading-snug max-w-200px lg:max-w-unset">{title}</h1>
+                </Link>
             </div>
 
             <Hamburger active={menuOpen} onClick={() => {
@@ -71,31 +73,32 @@ export default ({title}) => {
                 </li>
             </ul>
 
-            <ul className={`md:hidden ${menuOpen ? `` : `menu-hidden`} ${menuHidden && 'hidden'}`} id={"mobile-nav"}>
-                <li key="home"
-                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
-                    <Link to="/">HOME</Link>
-                </li>
-                <li key="prices"
-                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
-                    <Link to="/prices">PRICES</Link>
-                </li>
-                <li key="blog"
-                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
-                    <Link to="/blog">BLOG</Link>
-                </li>
-                <li key="reviews"
-                    className="text-gray-800 md:mr-16 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
-                    <Link to="/reviews">REVIEWS</Link>
-                </li>
-                <li key="book-now">
-                    <button
-                        className="bg-orange-600 text-white font-semibold py-4 px-8 text-3xl my-2 md:my-0 md:text-base">BOOK
-                        NOW
-                    </button>
-                </li>
-            </ul>
-
+            <div className={`flex items-center justify-center md:hidden ${menuOpen ? `` : `menu-hidden`} ${menuHidden && 'hidden'}`} id={"mobile-nav"}>
+                <ul className={"flex flex-col items-center"}>
+                    <li key="home"
+                        className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
+                        <Link to="/">HOME</Link>
+                    </li>
+                    <li key="prices"
+                        className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
+                        <Link to="/prices">PRICES</Link>
+                    </li>
+                    <li key="blog"
+                        className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
+                        <Link to="/blog">BLOG</Link>
+                    </li>
+                    <li key="reviews"
+                        className="text-gray-800 md:mr-16 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
+                        <Link to="/reviews">REVIEWS</Link>
+                    </li>
+                    <li key="book-now">
+                        <button
+                            className="bg-orange-600 text-white font-semibold py-4 px-8 text-3xl my-2 md:my-0 md:text-base">BOOK
+                            NOW
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
     );
