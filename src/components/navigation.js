@@ -33,9 +33,9 @@ export default ({title}) => {
             <Hamburger active={menuOpen} onClick={() => {
                 if (menuOpen) {
                     // menu is being shut
+                    document.querySelector("body").classList.remove("fixed")
                     setTimeout(() => {
                         setMenuHidden(true)
-                        document.querySelector("body").classList.remove("fixed")
                     }, 100)
                 } else {
                     document.querySelector("body").classList.add("fixed")
