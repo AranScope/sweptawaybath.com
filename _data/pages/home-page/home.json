@@ -9,6 +9,7 @@
         },
         "right": {
           "include_booking_button": true,
+          "include_coverage_map": false,
           "title": "Schedule Appointment",
           "text": "All estimates are free and flexible. No hidden charges. No up selling."
         }
@@ -21,6 +22,7 @@
         },
         "right": {
           "include_booking_button": false,
+          "include_coverage_map": false,
           "title": "Covering 20 miles around Bath",
           "text": "Based in Bath, we cover a 20 mile radius, including Bristol, Chippenham, Trowbridge and more."
         }

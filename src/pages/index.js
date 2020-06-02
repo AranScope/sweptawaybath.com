@@ -1,7 +1,6 @@
 import React from "react"
 import Helmet from 'react-helmet';
 import Layout from "../components/layout"
-import PostLink from "../components/post-link"
 import Navigation from "../components/navigation";
 import Quote from "../components/quote";
 import Header from "../components/header";
@@ -36,6 +35,7 @@ const pageQuery = graphql`
                         title
                     }
                     right {
+                        include_coverage_map
                         include_booking_button
                         text
                         title

@@ -7,34 +7,37 @@ import HeaderTitle from "../components/headerTitle"
 import {graphql, StaticQuery} from "gatsby";
 import Container from "../components/container"
 import SideBySide from "../components/sideBySide"
+import Section from "../components/section"
 import Tick from "../components/tick"
 
 const Prices = ({prices}) => (
     <>
-        <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold"
-            style={{fontFamily: "Nunito Sans"}}>£{prices.regular_sweep.price} {prices.regular_sweep.title}</h1>
-        <p className="text-gray-600 text-xl font-serif leading-loose">{prices.regular_sweep.description}</p>
-        <ul>
-            {
-                prices.everything_else_free.map(item => (
-                    <>
-                        <li className={"flex items-center"}><Tick/> <p
-                            className={"ml-2 text-gray-800"}>{item.title} - {item.description}</p> {item.new && (
-                            <span
-                                className="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
-                        )
-                        }</li>
-                    </>
-                ))
-            }
-        </ul>
+        <Section>
+            <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold"
+                style={{fontFamily: "Nunito Sans"}}>£{prices.regular_sweep.price} {prices.regular_sweep.title}</h1>
+            <p className="text-gray-600 text-xl font-serif leading-loose">{prices.regular_sweep.description}</p>
+            <ul className={"my-4 bg-gray-100 border-l-4 border-gray-500 p-4"}>
+                {
+                    prices.everything_else_free.map(item => (
+                        <>
+                            <li className={"flex items-center my-1"}><Tick/> <p
+                                className={"ml-2 text-gray-800 text-xl"}><span className={"font-bold"}>{item.title}</span> - {item.description}</p> {item.new && (
+                                <span
+                                    className="flex rounded-full bg-green-500 text-green-100 uppercase px-2 py-1 text-xs font-bold ml-2">New</span>
+                            )
+                            }</li>
+                        </>
+                    ))
+                }
+            </ul>
+        </Section>
         {
             prices.everything_else_paid.map(item => (
-                <>
-                    <h2 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold"
-                        style={{fontFamily: "Nunito Sans"}}>£{item.price} {item.title}</h2>
+                <Section>
+                    <h2 className="text-gray-900 text-2xl md:text-2xl leading-tight font-extrabold"
+                        style={{fontFamily: "Nunito Sans"}}>+ £{item.price} {item.title}</h2>
                     <p className="text-gray-600 text-xl font-serif leading-loose">{item.description}</p>
-                </>
+                </Section>
             ))
         }
     </>

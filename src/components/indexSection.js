@@ -2,10 +2,10 @@ import React from "react"
 import SideBySide from "./sideBySide"
 import CoverageMap from "./coverageMap"
 
-export default ({leftTitle, leftBody, leftIncludesMap, rightTitle, rightBody, rightIncludesBookButton}) => (
+export default ({leftTitle, leftBody, leftIncludesMap, rightTitle, rightBody, rightIncludesBookButton, rightIncludesMap}) => (
     <SideBySide>
         <>
-            <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold"
+            <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold mb-4"
                 style={{fontFamily: "Nunito Sans"}}>{leftTitle}</h1>
             {leftBody && (
                 <p className="text-gray-600 text-xl font-serif leading-loose">{leftBody}</p>
@@ -29,6 +29,9 @@ export default ({leftTitle, leftBody, leftIncludesMap, rightTitle, rightBody, ri
                     className="pointer inline-block border-solid border-2 border-orange-600 hover:bg-orange-600 hover:text-white text-orange-600 font-semibold py-4 my-8 px-8">BOOK
                     NOW
                 </a>
+            )}
+            {rightIncludesMap && (
+                <CoverageMap/>
             )}
         </>
     </SideBySide>

@@ -76,10 +76,18 @@ body {
 
 .blog-post-content p, .blog-post-content li, .blog-post-content a {
     /*font-family: "Vollkorn", Palatino, Times;*/
+    @apply text-xl;
+    @apply font-light;
     color: hsl(0, 0%, 37%);
-    font: 1em "Merriweather", Palatino, Times;
-    font-weight: lighter;
+    font-family: "Merriweather", Palatino, Times, serif;
+    /*font-weight: lighter;*/
     @apply leading-loose;
+}
+
+@screen md {
+    .blog-post-content p, .blog-post-content li, .blog-post-content a {
+        @apply text-2xl;
+    }
 }
 
 .blog-post-content a {

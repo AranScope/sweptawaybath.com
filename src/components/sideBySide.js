@@ -1,12 +1,11 @@
 import React from "react"
-import Section from "./section"
 
 export default ({children}) => {
     console.log(children)
     console.log(React.Children.count(children))
     children = React.Children.toArray(children)
     return (
-        <Section>
+        <section className="md:flex mb-6">
             <div className="md:w-3/4 md:pr-20">
                 {children[0]}
             </div>
@@ -16,6 +15,6 @@ export default ({children}) => {
                 </div>
             )
             }
-        </Section>
+        </section>
     );
 }

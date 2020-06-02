@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import Helmet from 'react-helmet';
 import {graphql} from "gatsby"
 import Layout from "../components/layout"
@@ -30,12 +30,12 @@ export default function Template({
                         <div className={"flex justify-center md:justify-start -my-6"}>
                             <a
                                 target={"_blank"}
-                                href={"https://www.facebook.com/sharer/sharer.php?u=" + "http://sweptawaybath.com"}
+                                rel={"noreferrer"}
+                                href={"https://www.facebook.com/sharer/sharer.php?u=http://sweptawaybath.com"}
                                 className="flex items-center shadow-md bg-facebook hover:bg-blue-700 text-white py-2 px-6 mx-2">
                                 <span className={"font-bold text-2xl"}>f</span> <span className={"ml-4"}>SHARE</span>
                             </a>
-                            <a
-                                href={"javascript:void(0)"}
+                            <button
                                 onClick={() => {
                                     if (typeof window !== "undefined" && window.navigator.share) {
                                         window.navigator.share({
@@ -57,7 +57,7 @@ export default function Template({
                                                           width="24" height="24"><path className="fill-current"
                                                                                        d="M19.48 13.03A4 4 0 0 1 16 19h-4a4 4 0 1 1 0-8h1a1 1 0 0 0 0-2h-1a6 6 0 1 0 0 12h4a6 6 0 0 0 5.21-8.98L21.2 12a1 1 0 1 0-1.72 1.03zM4.52 10.97A4 4 0 0 1 8 5h4a4 4 0 1 1 0 8h-1a1 1 0 0 0 0 2h1a6 6 0 1 0 0-12H8a6 6 0 0 0-5.21 8.98l.01.02a1 1 0 1 0 1.72-1.03z"/></svg></span>
                                 <span className={"ml-4"}>{typeof window !== "undefined" && window.navigator.share ? "SHARE" : copied ? "COPIED" : "COPY"}</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </Header>

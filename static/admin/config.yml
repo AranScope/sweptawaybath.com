@@ -200,6 +200,10 @@ collections:
                         name: include_booking_button
                         label: Include booking button?
                         default: false
+                      - widget: boolean
+                        name: include_coverage_map
+                        label: Include coverage map?
+                        default: false
 
   - name: blog_categories
     label: Blog Categories
