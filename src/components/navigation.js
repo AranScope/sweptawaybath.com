@@ -9,7 +9,7 @@ export default ({title}) => {
     return (
         <nav className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0 text-white">
-                <svg className="fill-current h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" id="Capa_1"
+                <svg className="hidden md:block fill-current h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" id="Capa_1"
                      enableBackground="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512">
                     <g>
                         <g>
@@ -33,8 +33,10 @@ export default ({title}) => {
                     // menu is being shut
                     setTimeout(() => {
                         setMenuHidden(true)
+                        document.querySelector("body").classList.remove("fixed")
                     }, 100)
                 } else {
+                    document.querySelector("body").classList.add("fixed")
                     setMenuHidden(false)
                 }
 
@@ -66,33 +68,29 @@ export default ({title}) => {
                         className="pointer inline-block bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
                         NOW
                     </a>
-                    {/*<button*/}
-                    {/*    className="bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK*/}
-                    {/*    NOW*/}
-                    {/*</button>*/}
                 </li>
             </ul>
 
             <ul className={`md:hidden ${menuOpen ? `` : `menu-hidden`} ${menuHidden && 'hidden'}`} id={"mobile-nav"}>
                 <li key="home"
-                    className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
                     <Link to="/">HOME</Link>
                 </li>
                 <li key="prices"
-                    className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
                     <Link to="/prices">PRICES</Link>
                 </li>
                 <li key="blog"
-                    className="text-gray-800 md:mr-6 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
                     <Link to="/blog">BLOG</Link>
                 </li>
                 <li key="reviews"
-                    className="text-gray-800 md:mr-16 font-semibold text-4xl md:text-base my-4 md:my-0 hover:text-white">
+                    className="text-gray-800 md:mr-16 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
                     <Link to="/reviews">REVIEWS</Link>
                 </li>
                 <li key="book-now">
                     <button
-                        className="bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
+                        className="bg-orange-600 text-white font-semibold py-4 px-8 text-3xl my-2 md:my-0 md:text-base">BOOK
                         NOW
                     </button>
                 </li>
