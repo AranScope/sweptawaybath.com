@@ -7,7 +7,8 @@ import Navigation from "../components/navigation";
 import HeaderTitle from "../components/headerTitle";
 
 export default function Template({
-                                     data, // this prop will be injected by the GraphQL query below.
+                                     data,
+                                     location
                                  }) {
     const {site, markdownRemark} = data // data.markdownRemark holds your post data
     const {siteMetadata} = site
@@ -31,7 +32,7 @@ export default function Template({
                             <a
                                 target={"_blank"}
                                 rel={"noreferrer"}
-                                href={"https://www.facebook.com/sharer/sharer.php?u=http://sweptawaybath.com"}
+                                href={`https://www.facebook.com/sharer/sharer.php?u=${location.href}`}
                                 className="flex items-center shadow-md bg-facebook hover:bg-blue-700 text-white py-2 px-6 mx-2">
                                 <span className={"font-bold text-2xl"}>f</span> <span className={"ml-4"}>SHARE</span>
                             </a>
@@ -39,8 +40,8 @@ export default function Template({
                                 onClick={() => {
                                     if (typeof window !== "undefined" && window.navigator.share) {
                                         window.navigator.share({
-                                            title: 'Swept Away Blog Post',
-                                            url: 'https://sweptaway.netlify.app/blog'
+                                            title: frontmatter.title,
+                                            url: location.href
                                         }).then(() => {
                                             console.log('Thanks for sharing!');
                                         })
@@ -56,7 +57,8 @@ export default function Template({
               <span className={"font-bold text-2xl"}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                           width="24" height="24"><path className="fill-current"
                                                                                        d="M19.48 13.03A4 4 0 0 1 16 19h-4a4 4 0 1 1 0-8h1a1 1 0 0 0 0-2h-1a6 6 0 1 0 0 12h4a6 6 0 0 0 5.21-8.98L21.2 12a1 1 0 1 0-1.72 1.03zM4.52 10.97A4 4 0 0 1 8 5h4a4 4 0 1 1 0 8h-1a1 1 0 0 0 0 2h1a6 6 0 1 0 0-12H8a6 6 0 0 0-5.21 8.98l.01.02a1 1 0 1 0 1.72-1.03z"/></svg></span>
-                                <span className={"ml-4"}>{typeof window !== "undefined" && window.navigator.share ? "SHARE" : copied ? "COPIED" : "COPY"}</span>
+                                <span
+                                    className={"ml-4"}>{typeof window !== "undefined" && window.navigator.share ? "SHARE" : copied ? "COPIED" : "COPY"}</span>
                             </button>
                         </div>
                     </div>

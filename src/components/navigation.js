@@ -79,19 +79,19 @@ export default () => {
                             }}>
                             <ul className={"flex flex-col items-center"}>
                                 <li key="home"
-                                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
+                                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:underline">
                                     <Link to="/">HOME</Link>
                                 </li>
                                 <li key="prices"
-                                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
+                                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:underline">
                                     <Link to="/prices">PRICES</Link>
                                 </li>
                                 <li key="blog"
-                                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
+                                    className="text-gray-800 md:mr-6 font-semibold text-3xl md:text-base my-2 md:my-0 hover:underline">
                                     <Link to="/blog">BLOG</Link>
                                 </li>
                                 <li key="reviews"
-                                    className="text-gray-800 md:mr-16 font-semibold text-3xl md:text-base my-2 md:my-0 hover:text-white">
+                                    className="text-gray-800 md:mr-16 font-semibold text-3xl md:text-base my-2 md:my-0 hover:underline">
                                     <Link to="/reviews">REVIEWS</Link>
                                 </li>
                                 <li key="book-now">

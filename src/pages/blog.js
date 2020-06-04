@@ -41,12 +41,12 @@ export default () => (
             <Layout>
                 <Helmet>
                     <title></title>
-                    <meta name="description" content={"Contact page of "}/>
+                    <meta name="description" content={data.blogPageJson.metadata.description}/>
                 </Helmet>
                 <Header
                     imageUrl={"https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
                     <Navigation/>
-                    <HeaderTitle>Thoughts about things</HeaderTitle>
+                    <HeaderTitle>{data.blogPageJson.header.title}</HeaderTitle>
                 </Header>
                 <Container>
                     {
@@ -70,6 +70,15 @@ export default () => (
 
 const pageQuery = graphql`
     query blogPageQuery {
+        blogPageJson {
+            metadata {
+                description
+            }
+            header {
+                title
+            }
+        }
+            
         allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
             edges {
                 node {

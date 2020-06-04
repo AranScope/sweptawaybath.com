@@ -204,6 +204,27 @@ collections:
                         name: include_coverage_map
                         label: Include coverage map?
                         default: false
+      - name: blog
+        label: Blog
+        file: _data/pages/blog-page/blog.json
+        create: true
+        fields:
+          - widget: object
+            name: metadata
+            label: Metadata
+            fields:
+              - widget: text
+                name: description
+                label: Description
+                required: true
+          - widget: object
+            name: header
+            label: Header
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
 
   - name: blog_categories
     label: Blog Categories

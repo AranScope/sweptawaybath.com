@@ -26,8 +26,8 @@ export default ({children}) => {
             <div className={`site-wrapper ${menuOpen && 'fixed'}`}>
                 <Alert link={"/coronavirus"}/>
                 {children}
-                <Footer/>
             </div>
+            <Footer/>
         </MenuContext.Provider>
     )
 }
