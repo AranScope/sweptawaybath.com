@@ -74,7 +74,7 @@ const IndexPage = () => {
                     <Header
                         className={"overflow-x-hidden"}
                         imageUrl={data.homePageJson.header.background_image}>
-                        <Navigation title={data.homePageJson.header.title}/>
+                        <Navigation/>
                         <Quote body={randomTestimonial.body} author={randomTestimonial.customer_name}/>
                     </Header>
 

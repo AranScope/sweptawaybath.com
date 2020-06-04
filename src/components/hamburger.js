@@ -1,13 +1,13 @@
 import React from "react"
 
-export default ({onClick, active}) => {
-    let color = active ? 'gray-700' : 'gray-100'
+export default ({open, setOpen}) => {
+    let color = open ? 'gray-700' : 'gray-100'
 
     return (
-        <button id="hamburger-button" onClick={onClick}
+        <button id="hamburger-button" onClick={() => setOpen(prev => !prev)}
                 className={`focus:outline-none md:hidden flex items-center px-3 py-2 border rounded text-${color} border-${color} z-10 md:z-0`}>
 
-            {active && (
+            {open && (
                 <div className={"flex items-center"}>
                     <svg className={`fill-current text-${color} h-6 w-6`} xmlns="http://www.w3.org/2000/svg"
                          height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt">
@@ -17,7 +17,7 @@ export default ({onClick, active}) => {
                     <p className={`text-xl text-${color} font-semibold ml-3`}>MENU</p>
                 </div>
             )}
-            {!active && (
+            {!open && (
                 <div className={"flex items-center"}>
                     <svg className={`fill-current text-${color} h-6 w-6`} viewBox="0 0 20 20"
                          xmlns="http://www.w3.org/2000/svg">
