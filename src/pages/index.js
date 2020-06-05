@@ -8,6 +8,7 @@ import Section from "../components/indexSection"
 import {graphql, StaticQuery} from "gatsby";
 import Container from "../components/container";
 import SEO from "../components/seo"
+import "../styles/global.css"
 
 const pageQuery = graphql`
     query indexPageQuery {
