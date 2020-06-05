@@ -1,3 +1,6 @@
 {
-  "title": "Swept Away Chimney Sweep - Bath Bristol and Surrounds."
+  "defaultTitle": "Swept Away Chimney Sweep",
+  "titleTemplate": "%s - Swept Away Chimney Sweep",
+  "defaultDescription": "Swept Away Chimney Sweep",
+  "defaultImage": "/assets/rsz_1882415_401914703239818_1202929964_o.jpg"
 }
