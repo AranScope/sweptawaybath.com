@@ -1,43 +1,44 @@
 {
-  "body": {
-    "sections": [
-      {
-        "left": {
-          "include_coverage_map": false,
-          "title": "Professional, Experienced Chimney Sweep",
-          "text": "Manual sweeps, power sweeps, camera inspections, and more. Our services are varied, but all come with the same promise of quality, dedication and durability. Licensed, insured and over 10 years of experience. I guarantee my work, as well as offering free estimates."
-        },
-        "right": {
-          "include_booking_button": true,
-          "include_coverage_map": false,
-          "title": "Schedule Appointment",
-          "text": "All estimates are free and flexible. No hidden charges. No up selling."
-        }
-      },
-      {
-        "left": {
-          "include_coverage_map": true,
-          "title": "We cover 20 miles around Bath",
-          "text": ""
-        },
-        "right": {
-          "include_booking_button": false,
-          "include_coverage_map": false,
-          "title": "Covering 20 miles around Bath",
-          "text": "Based in Bath, we cover a 20 mile radius, including Bristol, Chippenham, Trowbridge and more."
-        }
-      }
-    ]
+  "metadata": {
+    "title": "Swept Away Chimney Sweep - Bath Bristol and Surrounds.",
+    "description": "Experienced Professional Chimney Sweep Serving Bath and Surrounds.",
+    "image": "/assets/SQS_DK_carlos_0226-e (2)-min (1).jpg"
   },
   "header": {
     "alert": {
       "badge": "NEW",
       "text": "Now qualified in infection control and prevention"
     },
-    "background_image": "/assets/sqs_dk_carlos_0226-e.jpg"
+    "background_image": "/assets/SQS_DK_carlos_0226-e (2)-min (1).jpg"
   },
-  "metadata": {
-    "description": "Experienced Professional Chimney Sweep Serving Bath and Surrounds.",
-    "title": "Swept Away Chimney Sweep - Bath Bristol and Surrounds."
+  "body": {
+    "sections": [
+      {
+        "left": {
+          "title": "Professional, Experienced Chimney Sweep",
+          "text": "Manual sweeps, power sweeps, camera inspections, and more. Our services are varied, but all come with the same promise of quality, dedication and durability. Licensed, insured and over 10 years of experience. I guarantee my work, as well as offering free estimates.",
+          "include_coverage_map": false
+        },
+        "right": {
+          "title": "Schedule Appointment",
+          "text": "All estimates are free and flexible. No hidden charges. No up selling.",
+          "include_booking_button": true,
+          "include_coverage_map": false
+        }
+      },
+      {
+        "left": {
+          "title": "We cover 20 miles around Bath",
+          "text": "",
+          "include_coverage_map": true
+        },
+        "right": {
+          "title": "Covering 20 miles around Bath",
+          "text": "Based in Bath, we cover a 20 mile radius, including Bristol, Chippenham, Trowbridge and more.",
+          "include_booking_button": false,
+          "include_coverage_map": false
+        }
+      }
+    ]
   }
 }
