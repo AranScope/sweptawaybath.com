@@ -1,9 +1,9 @@
 import React from "react"
-import Link from "gatsby";
+import {Link} from "gatsby";
 
 export default props => (
     <div className="bg-indigo-900 text-center py-4 px-2 md:px-4">
-        <a href={props.link}>
+        <Link to={props.link}>
             <div
                 className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none md:rounded-full flex lg:inline-flex hover:bg-indigo-700"
                 role="alert">
@@ -13,7 +13,7 @@ export default props => (
                     <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/>
                 </svg>
             </div>
-        </a>
+        </Link>
     </div>
 )
 

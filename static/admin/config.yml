@@ -39,12 +39,32 @@ collections:
         fields:
           - widget: string
             name: title
-            label: Site Title
+            label: Site Title (in header, visible)
             required: true
           - widget: string
             name: siteUrl
             label: Website URL
             required: true
+          - widget: string
+            name: google-site-verification
+            label: Google site verification token
+            required: false
+      - name: seo
+        label: SEO
+        file: site-seo.json
+        fields:
+          - widget: string
+            name: defaultTitle
+            label: Default page title
+          - widget: string
+            name: titleTemplate
+            label: Title template
+          - widget: text
+            name: defaultDescription
+            label: Default page description
+          - widget: image
+            name: defaultImage
+            label: Default page image
 
   - name: pages
     label: Pages
@@ -128,6 +148,10 @@ collections:
             name: metadata
             label: Metadata
             fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
               - widget: text
                 name: description
                 label: Description
@@ -146,10 +170,6 @@ collections:
                   - widget: string
                     name: text
                     label: Text
-              - widget: string
-                name: title
-                label: Title
-                required: true
               - widget: image
                 name: background_image
                 label: Background Image

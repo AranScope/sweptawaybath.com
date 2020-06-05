@@ -62,11 +62,11 @@ export default () => {
                                 <Link to="/reviews">REVIEWS</Link>
                             </li>
                             <li key="book-now">
-                                <a
-                                    href={"/book"}
+                                <Link
+                                    to={"/book"}
                                     className="pointer inline-block bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
                                     NOW
-                                </a>
+                                </Link>
                             </li>
                         </ul>
 
@@ -95,11 +95,11 @@ export default () => {
                                     <Link to="/reviews">REVIEWS</Link>
                                 </li>
                                 <li key="book-now">
-                                    <a
-                                        href={"/book"}
+                                    <Link
+                                        to={"/book"}
                                         className="pointer inline-block bg-orange-600 text-white font-semibold py-4 px-8 text-3xl my-4 md:my-0 md:text-base">BOOK
                                         NOW
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

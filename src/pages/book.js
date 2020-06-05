@@ -27,21 +27,6 @@ const pageQuery = graphql`
                     text
                 }
                 background_image
-                title
-            }
-            body {
-                sections {
-                    left {
-                        include_coverage_map
-                        text
-                        title
-                    }
-                    right {
-                        include_booking_button
-                        text
-                        title
-                    }
-                }
             }
         }
     }
@@ -65,7 +50,7 @@ const IndexPage = () => {
                 <Header
                     className={"overflow-x-hidden"}
                     imageUrl={data.homePageJson.header.background_image}>
-                    <Navigation title={data.homePageJson.header.title}/>
+                    <Navigation/>
                     <HeaderTitle>Book Now</HeaderTitle>
                     <div className={"block md:hidden relative"} style={{top: "1.6rem"}}>
                         <div className={"flex justify-center md:justify-start -my-6"}>

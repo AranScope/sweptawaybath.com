@@ -1,6 +1,7 @@
 import React from "react"
 import SideBySide from "./sideBySide"
 import CoverageMap from "./coverageMap"
+import {Link} from "gatsby"
 
 export default ({leftTitle, leftBody, leftIncludesMap, rightTitle, rightBody, rightIncludesBookButton, rightIncludesMap}) => (
     <SideBySide>
@@ -16,19 +17,18 @@ export default ({leftTitle, leftBody, leftIncludesMap, rightTitle, rightBody, ri
             )}
         </>
         <>
-            <h2><a
-                className="text-gray-900 md:text-gray-700 text-2xl leading-tight font-extrabold md:font-semibold  md:text-base md:uppercase"
-                style={{fontFamily: "Nunito Sans"}}>{rightTitle}</a></h2><br/>
+            <h2 className="text-gray-900 md:text-gray-700 text-2xl leading-tight font-extrabold md:font-semibold  md:text-base md:uppercase"
+                style={{fontFamily: "Nunito Sans"}}>{rightTitle}</h2><br/>
             {rightBody && (
                 <p className="text-gray-600 text-xl font-serif leading-loose">{rightBody}</p>
             )
             }
             {rightIncludesBookButton && (
-                <a
-                    href={"/book"}
+                <Link
+                    to={"/book"}
                     className="pointer inline-block border-solid border-2 border-orange-600 hover:bg-orange-600 hover:text-white text-orange-600 font-semibold py-4 my-8 px-8">BOOK
                     NOW
-                </a>
+                </Link>
             )}
             {rightIncludesMap && (
                 <CoverageMap/>

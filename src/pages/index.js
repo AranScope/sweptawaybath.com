@@ -7,6 +7,7 @@ import Header from "../components/header";
 import Section from "../components/indexSection"
 import {graphql, StaticQuery} from "gatsby";
 import Container from "../components/container";
+import SEO from "../components/seo"
 
 const pageQuery = graphql`
     query indexPageQuery {
@@ -25,7 +26,6 @@ const pageQuery = graphql`
                     text
                 }
                 background_image
-                title
             }
             body {
                 sections {
@@ -67,10 +67,7 @@ const IndexPage = () => {
 
             return (
                 <Layout>
-                    <Helmet>
-                        <title>{data.site.siteMetadata.title}</title>
-                        <meta name="description" content={data.homePageJson.metadata.description}/>
-                    </Helmet>
+                    <SEO/>
                     <Header
                         className={"overflow-x-hidden"}
                         imageUrl={data.homePageJson.header.background_image}>

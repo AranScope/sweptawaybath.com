@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Navigation from "../components/navigation";
 import Header from "../components/header";
 import HeaderTitle from "../components/headerTitle"
-import {graphql, StaticQuery} from "gatsby";
+import {graphql, StaticQuery, Link} from "gatsby";
 import Container from "../components/container"
 import SideBySide from "../components/sideBySide"
 import Section from "../components/section"
@@ -44,15 +44,14 @@ const Prices = ({prices}) => (
             }
         </>
         <>
-            <h2><a
-                className="text-gray-900 md:text-gray-700 text-2xl leading-tight font-extrabold md:font-semibold  md:text-base md:uppercase"
-                style={{fontFamily: "Nunito Sans"}}>Schedule Appointment</a></h2><br/>
+            <h2 className="text-gray-900 md:text-gray-700 text-2xl leading-tight font-extrabold md:font-semibold  md:text-base md:uppercase"
+                style={{fontFamily: "Nunito Sans"}}>Schedule Appointment</h2><br/>
             <p className="text-gray-600 text-xl font-serif leading-loose">All estimates are free and flexible. No hidden charges. No up selling.</p>
-            <a
-                href={"/book"}
+            <Link
+                to={"/book"}
                 className="pointer inline-block border-solid border-2 border-orange-600 hover:bg-orange-600 hover:text-white text-orange-600 font-semibold py-4 my-8 px-8">BOOK
                 NOW
-            </a>
+            </Link>
         </>
     </SideBySide>
 
