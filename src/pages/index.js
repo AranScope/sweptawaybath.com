@@ -11,13 +11,9 @@ import SEO from "../components/seo"
 
 const pageQuery = graphql`
     query indexPageQuery {
-        site {
-            siteMetadata {
-                title
-            }
-        }
         homePageJson {
             metadata {
+                title
                 description
             }
             header {
@@ -67,7 +63,7 @@ const IndexPage = () => {
 
             return (
                 <Layout>
-                    <SEO/>
+                    <SEO title={data.homePageJson.metadata.title} description={data.homePageJson.metadata.description} image={data.homePageJson.metadata.image}/>
                     <Header
                         className={"overflow-x-hidden"}
                         imageUrl={data.homePageJson.header.background_image}>

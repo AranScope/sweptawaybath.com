@@ -49,10 +49,6 @@ collections:
             name: google-site-verification
             label: Google site verification token
             required: false
-      - name: seo
-        label: SEO
-        file: site-seo.json
-        fields:
           - widget: string
             name: defaultTitle
             label: Default page title
@@ -156,6 +152,9 @@ collections:
                 name: description
                 label: Description
                 required: true
+              - widget: image
+                name: image
+                label: Image
           - widget: object
             name: header
             label: Header
