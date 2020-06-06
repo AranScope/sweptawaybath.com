@@ -32,7 +32,7 @@ export default props => {
                     className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none md:rounded-full flex lg:inline-flex hover:bg-indigo-700"
                     role="alert">
                     <span
-                        className="flex rounded-full bg-indigo-400 uppercase px-2 py-1 text-xs font-bold mr-3">{alert.badge}</span>
+                        className="flex rounded-full bg-indigo-600 uppercase px-2 py-1 text-xs font-bold mr-3">{alert.badge}</span>
                     <span className="font-semibold mr-2 text-left flex-auto">{alert.text}</span>
                     <svg className="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 20 20">
