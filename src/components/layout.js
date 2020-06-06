@@ -9,7 +9,7 @@ export default ({children}) => {
 
     return (
         <MenuContext.Provider value={{menuOpen: menuOpen, setMenuOpen: setMenuOpen}}>
-            <div className={`site-wrapper w-screen ${menuOpen ? 'fixed': ''}`}>
+            <div className={`site-wrapper overflow-x-hidden w-screen ${menuOpen ? 'fixed': ''}`}>
                 <Alert/>
                 {children}
             </div>
