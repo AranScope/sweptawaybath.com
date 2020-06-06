@@ -8,14 +8,6 @@ module.exports = {
     /* Your site config here */
     siteMetadata: require("./site-meta-data.json"),
     plugins: [
-        {
-            resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-            options: {
-                analyzerPort: 3000,
-                production: true,
-                disable: false,
-            },
-        },
         'gatsby-plugin-robots-txt',
         `gatsby-plugin-postcss`,
         {
@@ -118,7 +110,7 @@ module.exports = {
         `gatsby-plugin-netlify-cms`,
         // siteURL is a must for sitemap generation
         `gatsby-plugin-sitemap`,
-        `gatsby-plugin-preact`
+        `gatsby-plugin-preact`,
         // `gatsby-plugin-offline`,
     ],
 }
