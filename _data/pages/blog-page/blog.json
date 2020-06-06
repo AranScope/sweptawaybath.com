@@ -1,8 +1,10 @@
 {
+  "metadata": {
+    "title": "Blog",
+    "description": "A collection of articles",
+    "image": "/assets/Capture (1).jpg"
+  },
   "header": {
     "title": "A collection of articles"
-  },
-  "metadata": {
-    "description": "A collection of articles"
   }
 }
