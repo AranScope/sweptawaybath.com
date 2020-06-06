@@ -64,7 +64,7 @@ export default () => {
                             <li key="book-now">
                                 <Link
                                     to={"/book"}
-                                    className="pointer inline-block bg-orange-600 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
+                                    className="pointer inline-block bg-orange-700 text-white font-semibold py-4 px-8 text-4xl my-4 md:my-0 md:text-base">BOOK
                                     NOW
                                 </Link>
                             </li>
@@ -97,7 +97,7 @@ export default () => {
                                 <li key="book-now">
                                     <Link
                                         to={"/book"}
-                                        className="pointer inline-block bg-orange-600 text-white font-semibold py-4 px-8 text-3xl my-4 md:my-0 md:text-base">BOOK
+                                        className="pointer inline-block bg-orange-700 text-white font-semibold py-4 px-8 text-3xl my-4 md:my-0 md:text-base">BOOK
                                         NOW
                                     </Link>
                                 </li>

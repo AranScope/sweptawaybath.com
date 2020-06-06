@@ -118,7 +118,7 @@ body {
 
 .blog-post-content table {
     @apply table-fixed;
-    @apply text-gray-600;
+    @apply text-gray-700;
     @apply my-4;
 }
 

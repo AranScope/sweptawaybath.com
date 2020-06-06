@@ -15,7 +15,7 @@ const Prices = ({prices}) => (
         <>
             <Section>
                 <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold" >£{prices.regular_sweep.price} {prices.regular_sweep.title}</h1>
-                <p className="text-gray-600 text-xl font-serif leading-loose">{prices.regular_sweep.description}</p>
+                <p className="text-gray-700 text-xl font-serif leading-loose">{prices.regular_sweep.description}</p>
                 <ul className={"my-4 bg-gray-100 border-l-4 border-gray-500 p-4"}>
                     {
                         prices.everything_else_free.map(item => (
@@ -36,17 +36,17 @@ const Prices = ({prices}) => (
                 prices.everything_else_paid.map(item => (
                     <Section>
                         <h2 className="text-gray-900 text-2xl md:text-2xl leading-tight font-extrabold">+ £{item.price} {item.title}</h2>
-                        <p className="text-gray-600 text-xl font-serif leading-loose">{item.description}</p>
+                        <p className="text-gray-700 text-xl font-serif leading-loose">{item.description}</p>
                     </Section>
                 ))
             }
         </>
         <>
             <h2 className="text-gray-900 md:text-gray-700 text-2xl leading-tight font-extrabold md:font-semibold  md:text-base md:uppercase">Schedule Appointment</h2><br/>
-            <p className="text-gray-600 text-xl font-serif leading-loose">All estimates are free and flexible. No hidden charges. No up selling.</p>
+            <p className="text-gray-700 text-xl font-serif leading-loose">All estimates are free and flexible. No hidden charges. No up selling.</p>
             <Link
                 to={"/book"}
-                className="pointer inline-block border-solid border-2 border-orange-600 hover:bg-orange-600 hover:text-white text-orange-600 font-semibold py-4 my-8 px-8">BOOK
+                className="pointer inline-block border-solid border-2 border-orange-700 hover:bg-orange-700 hover:text-white text-orange-700 font-semibold py-4 my-8 px-8">BOOK
                 NOW
             </Link>
         </>

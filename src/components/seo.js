@@ -23,7 +23,7 @@ export default ({title, description, image, isArticle}) => {
     }
 
     return (
-        <Helmet title={seo.title} titleTemplate={titleTemplate}>
+        <Helmet title={seo.title} titleTemplate={titleTemplate} htmlAttributes={{lang: "en"}}>
             <title>{seo.title}</title>
             <meta name="description" content={seo.description}/>
             <meta charSet="utf-8"/>
@@ -52,8 +52,10 @@ export default ({title, description, image, isArticle}) => {
 
             <link rel="icon" href="favicon.svg"/>
 
-            <link rel={"stylesheet"} href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"/>
-            <link rel={"stylesheet"} href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"/>
+            <link rel={"stylesheet"}
+                  href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"/>
+            <link rel={"stylesheet"}
+                  href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"/>
         </Helmet>
     )
 

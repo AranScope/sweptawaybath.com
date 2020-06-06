@@ -20,7 +20,7 @@ export default ({post, authorName, authorImage}) => (
                         className="w-10 h-10 rounded-full mr-4" src={authorImage.image} alt={authorImage.alt}/>
                     <div className="text-sm">
                         <p className="text-gray-900 leading-none">{authorName}</p>
-                        <p className="text-gray-600">{post.frontmatter.date}</p>
+                        <p className="text-gray-700">{post.frontmatter.date}</p>
                     </div>
                 </div>
             </div>
