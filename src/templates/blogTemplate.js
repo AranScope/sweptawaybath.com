@@ -69,6 +69,7 @@ export default function Template({
                         dangerouslySetInnerHTML={{__html: html}}
                     />
                     <iframe
+                        title="Facebook like button"
                         src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FSwept-Away-Chimney-Sweep-300577559972619%2F&width=92&layout=button_count&action=like&size=large&share=false&height=21&appId=516040375545244"
                         width="92" height="40" style={{border: "none", overflow: "hidden"}} scrolling="no"
                         frameBorder="0"
