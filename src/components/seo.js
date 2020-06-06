@@ -24,11 +24,13 @@ export default ({title, description, image, isArticle}) => {
         url: `${siteUrl}${pathname}`,
     }
 
-    WebFont.load({
-        google: {
-            families: ['Merriweather:400,700,400italic', 'Nunito Sans:600,900']
-        }
-    });
+    if (typeof window !== "undefined") {
+        WebFont.load({
+            google: {
+                families: ['Merriweather:400,700,400italic', 'Nunito Sans:600,900']
+            }
+        });
+    }
 
     return (
         <Helmet title={seo.title} titleTemplate={titleTemplate} htmlAttributes={{lang: "en"}}>
