@@ -52,7 +52,7 @@ const IndexPage = () => {
                             <a
                                 href={"tel:01225483690"}
                                 className="flex items-center shadow-md bg-green-600 hover:bg-green-400 text-white py-2 px-6 mx-2">
-                                <span className={"font-bold text-2xl"}><Phone/></span> <span className={"ml-4"}>TAP TO CALL</span>
+                                <span className={"font-bold"}><Phone/></span> <span className={"ml-4 text-2xl"}>TAP TO CALL</span>
                             </a>
                         </div>
                     </div>
