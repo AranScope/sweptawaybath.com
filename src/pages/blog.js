@@ -42,7 +42,7 @@ export default () => (
             <Layout>
                 <SEO title={data.blogPageJson.metadata.title} description={data.blogPageJson.metadata.description} image={data.blogPageJson.metadata.image}/>
                 <Header
-                    imageUrl={"https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
+                    imageUrl={data.blogPageJson.header.background_image}>
                     <Navigation/>
                     <HeaderTitle>{data.blogPageJson.header.title}</HeaderTitle>
                 </Header>
@@ -73,6 +73,7 @@ const pageQuery = graphql`
             }
             header {
                 title
+                background_image
             }
         }
             

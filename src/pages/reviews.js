@@ -12,11 +12,11 @@ export default () => (
     <StaticQuery query={pageQuery} render={data => {
         return (
             <Layout>
-                {/*<SEO title={data.pricesPageJson.metadata.title} description={data.pricesPageJson.metadata.description} image={data.pricesPageJson.metadata.image}/>*/}
+                <SEO title={data.reviewsPageJson.metadata.title} description={data.reviewsPageJson.metadata.description} image={data.reviewsPageJson.metadata.image}/>
                 <Header
-                    imageUrl={"https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
+                    imageUrl={data.reviewsPageJson.header.background_image}>
                     <Navigation/>
-                    <HeaderTitle>Reviews</HeaderTitle>
+                    <HeaderTitle>{data.reviewsPageJson.header.title}</HeaderTitle>
                 </Header>
                 <Container>
                     <div className="container mx-auto md:grid md:grid-cols-2 md:gap-6 my-6">
@@ -47,6 +47,17 @@ const pageQuery = graphql`
                     body
                     featured
                 }
+            }
+        }
+
+        reviewsPageJson {
+            metadata {
+                title
+                description
+            }
+            header {
+                title
+                background_image
             }
         }
 

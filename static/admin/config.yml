@@ -85,7 +85,22 @@ collections:
               - widget: image
                 name: image
                 label: Image
-
+          - widget: object
+            name: header
+            label: Header
+            fields:
+              - widget: string
+                name: title
+                label: Text
+                required: true
+              - widget: image
+                name: background_image
+                label: Background Image
+                required: true
+                media_library:
+                  config:
+                    multiple: false
+                hint: Use a high resolution image, as this takes up the full width of the screen
       - name: book
         label: Book
         file: _data/pages/book-page/book.json
@@ -106,6 +121,59 @@ collections:
               - widget: image
                 name: image
                 label: Image
+          - widget: object
+            name: header
+            label: Header
+            fields:
+              - widget: string
+                name: title
+                label: Text
+                required: true
+              - widget: image
+                name: background_image
+                label: Background Image
+                required: true
+                media_library:
+                  config:
+                    multiple: false
+                hint: Use a high resolution image, as this takes up the full width of the screen
+
+      - name: blog
+        label: Blog
+        file: _data/pages/blog-page/blog.json
+        create: true
+        fields:
+          - widget: object
+            name: metadata
+            label: Metadata
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: text
+                name: description
+                label: Description
+                required: true
+              - widget: image
+                name: image
+                label: Image
+          - widget: object
+            name: header
+            label: Header
+            fields:
+              - widget: string
+                name: title
+                label: Text
+                required: true
+              - widget: image
+                name: background_image
+                label: Background Image
+                required: true
+                media_library:
+                  config:
+                    multiple: false
+                hint: Use a high resolution image, as this takes up the full width of the screen
 
       - name: prices
         label: Prices
@@ -127,6 +195,22 @@ collections:
               - widget: image
                 name: image
                 label: Image
+          - widget: object
+            name: header
+            label: Header
+            fields:
+              - widget: string
+                name: title
+                label: Text
+                required: true
+              - widget: image
+                name: background_image
+                label: Background Image
+                required: true
+                media_library:
+                  config:
+                    multiple: false
+                hint: Use a high resolution image, as this takes up the full width of the screen
           - widget: object
             name: prices
             label: Prices

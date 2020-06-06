@@ -1,10 +1,10 @@
 import React, {useState} from "react"
-import Helmet from 'react-helmet';
 import {graphql} from "gatsby"
 import Layout from "../components/layout"
 import Header from "../components/header";
 import Navigation from "../components/navigation";
 import HeaderTitle from "../components/headerTitle";
+import SEO from "../components/seo";
 
 export default function Template({
                                      data,
@@ -18,10 +18,7 @@ export default function Template({
 
     return (
         <Layout>
-            <Helmet>
-                <title>{frontmatter.title} | {siteMetadata.title}</title>
-                <meta name="description" content={frontmatter.metaDescription}/>
-            </Helmet>
+            <SEO title={frontmatter.title} description={frontmatter.metaDescription} image={frontmatter.thumbnail}/>
             <div className="blog-post-container">
                 <Header
                     imageUrl={frontmatter.thumbnail || "https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
@@ -47,6 +44,7 @@ export default function Template({
                                         })
                                             .catch(console.error);
                                     } else {
+                                        navigator.clipboard.writeText(location.href);
                                         setCopied(true)
                                         setTimeout(() => {
                                             setCopied(false)
@@ -70,6 +68,11 @@ export default function Template({
                         className="blog-post-content text-2xl"
                         dangerouslySetInnerHTML={{__html: html}}
                     />
+                    <iframe
+                        src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FSwept-Away-Chimney-Sweep-300577559972619%2F&width=92&layout=button_count&action=like&size=large&share=false&height=21&appId=516040375545244"
+                        width="92" height="40" style={{border: "none", overflow: "hidden"}} scrolling="no"
+                        frameBorder="0"
+                        allowTransparency="true" allow="encrypted-media"/>
                 </article>
             </div>
         </Layout>

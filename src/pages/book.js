@@ -7,6 +7,7 @@ import Section from "../components/indexSection"
 import {graphql, StaticQuery} from "gatsby";
 import Container from "../components/container";
 import HeaderTitle from "../components/headerTitle";
+import SEO from "../components/seo";
 
 const pageQuery = graphql`
     query bookPageQuery {
@@ -15,17 +16,14 @@ const pageQuery = graphql`
                 title
             }
         }
-        homePageJson {
+        bookPageJson {
             metadata {
                 description
                 title
                 image
             }
             header {
-                alert {
-                    badge
-                    text
-                }
+                title
                 background_image
             }
         }
@@ -43,15 +41,12 @@ const IndexPage = () => {
     return (
         <StaticQuery query={pageQuery} render={data => (
             <Layout>
-                <Helmet>
-                    <title>{data.site.siteMetadata.title}</title>
-                    <meta name="description" content={data.homePageJson.metadata.description}/>
-                </Helmet>
+                <SEO title={data.bookPageJson.metadata.title} description={data.bookPageJson.metadata.description} image={data.bookPageJson.metadata.image}/>
                 <Header
                     className={"overflow-x-hidden"}
-                    imageUrl={data.homePageJson.header.background_image}>
+                    imageUrl={data.bookPageJson.header.background_image}>
                     <Navigation/>
-                    <HeaderTitle>Book Now</HeaderTitle>
+                    <HeaderTitle>{data.bookPageJson.header.title}</HeaderTitle>
                     <div className={"block md:hidden relative"} style={{top: "1.6rem"}}>
                         <div className={"flex justify-center md:justify-start -my-6"}>
                             <a
