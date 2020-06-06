@@ -52,8 +52,19 @@ export default ({title, description, image, isArticle}) => {
 
             <link rel="icon" href="favicon.svg"/>
 
-            <link rel={"stylesheet"} href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"/>
-            <link rel={"stylesheet"} href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"/>
+            <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"
+                  as="style"
+                  onLoad="this.onload=null;this.rel='stylesheet'"/>
+            <link rel="preload"
+                  href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+                  as="style"
+                  onLoad="this.onload=null;this.rel='stylesheet'"/>
+            <noscript>
+                <link rel="stylesheet"
+                      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"/>
+                <link rel="stylesheet"
+                      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"/>
+            </noscript>
         </Helmet>
     )
 
