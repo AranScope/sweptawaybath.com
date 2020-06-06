@@ -18,6 +18,8 @@ const pageQuery = graphql`
         homePageJson {
             metadata {
                 description
+                title
+                image
             }
             header {
                 alert {

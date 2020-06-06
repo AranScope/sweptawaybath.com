@@ -11,6 +11,11 @@ module.exports = {
         backgroundColor: theme => ({
             ...theme('colors'),
             'facebook': '#3b5998'
-        })
+        }),
+        fontFamily: {
+            'serif': ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+            'sans': ['Nunito Sans', 'Helvetica', 'Arial', 'sans-serif'],
+            'mono': ['Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace']
+        }
     }
 }

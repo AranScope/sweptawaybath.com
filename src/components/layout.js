@@ -1,9 +1,6 @@
 import React, {useState} from "react"
-import {useStaticQuery, graphql} from "gatsby"
 import Alert from "../components/alert"
 import Footer from "../components/footer"
-
-import 'prismjs/themes/prism-okaidia.css';
 
 export const MenuContext = React.createContext({});
 

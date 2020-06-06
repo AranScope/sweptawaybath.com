@@ -1,5 +1,4 @@
 import React from "react"
-import Helmet from 'react-helmet';
 import Layout from "../components/layout"
 import Navigation from "../components/navigation";
 import Header from "../components/header";
@@ -9,13 +8,13 @@ import Container from "../components/container"
 import SideBySide from "../components/sideBySide"
 import Section from "../components/section"
 import Tick from "../components/tick"
+import SEO from "../components/seo";
 
 const Prices = ({prices}) => (
     <SideBySide>
         <>
             <Section>
-                <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold"
-                    style={{fontFamily: "Nunito Sans"}}>£{prices.regular_sweep.price} {prices.regular_sweep.title}</h1>
+                <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold" >£{prices.regular_sweep.price} {prices.regular_sweep.title}</h1>
                 <p className="text-gray-600 text-xl font-serif leading-loose">{prices.regular_sweep.description}</p>
                 <ul className={"my-4 bg-gray-100 border-l-4 border-gray-500 p-4"}>
                     {
@@ -36,16 +35,14 @@ const Prices = ({prices}) => (
             {
                 prices.everything_else_paid.map(item => (
                     <Section>
-                        <h2 className="text-gray-900 text-2xl md:text-2xl leading-tight font-extrabold"
-                            style={{fontFamily: "Nunito Sans"}}>+ £{item.price} {item.title}</h2>
+                        <h2 className="text-gray-900 text-2xl md:text-2xl leading-tight font-extrabold">+ £{item.price} {item.title}</h2>
                         <p className="text-gray-600 text-xl font-serif leading-loose">{item.description}</p>
                     </Section>
                 ))
             }
         </>
         <>
-            <h2 className="text-gray-900 md:text-gray-700 text-2xl leading-tight font-extrabold md:font-semibold  md:text-base md:uppercase"
-                style={{fontFamily: "Nunito Sans"}}>Schedule Appointment</h2><br/>
+            <h2 className="text-gray-900 md:text-gray-700 text-2xl leading-tight font-extrabold md:font-semibold  md:text-base md:uppercase">Schedule Appointment</h2><br/>
             <p className="text-gray-600 text-xl font-serif leading-loose">All estimates are free and flexible. No hidden charges. No up selling.</p>
             <Link
                 to={"/book"}
@@ -62,9 +59,7 @@ export default () => (
 
         return (
             <Layout>
-                <Helmet>
-                    <title></title>
-                </Helmet>
+                <SEO title={data.pricesPageJson.metadata.title} description={data.pricesPageJson.metadata.description} image={data.pricesPageJson.metadata.image}/>
                 <Header
                     imageUrl={"https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
                     <Navigation/>
@@ -88,6 +83,11 @@ export const pageQuery = graphql`
         }
         
         pricesPageJson {
+            metadata {
+                title
+                description
+                image
+            }
             prices {
                 everything_else_free {
                     title

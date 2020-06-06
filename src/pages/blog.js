@@ -7,6 +7,7 @@ import Header from "../components/header"
 import HeaderTitle from "../components/headerTitle"
 import Container from "../components/container"
 import PostLink from "../components/post-link";
+import SEO from "../components/seo";
 
 const uncategorisedTitle = "Uncategorised"
 
@@ -39,10 +40,7 @@ export default () => (
 
         return (
             <Layout>
-                <Helmet>
-                    <title></title>
-                    <meta name="description" content={data.blogPageJson.metadata.description}/>
-                </Helmet>
+                <SEO title={data.blogPageJson.metadata.title} description={data.blogPageJson.metadata.description} image={data.blogPageJson.metadata.image}/>
                 <Header
                     imageUrl={"https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}>
                     <Navigation/>
@@ -52,8 +50,7 @@ export default () => (
                     {
                         groupedByCategory.map(group => (
                             <section key={group.category}>
-                                <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold"
-                                    style={{fontFamily: "Nunito Sans"}}>{group.category}</h1>
+                                <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold">{group.category}</h1>
                                 <div className="container mx-auto md:grid md:grid-cols-2 md:gap-6 my-6">
                                     {group.posts.map(post => <PostLink key={post.id} post={post} authorName={data.personalJson.first_name} authorImage={data.personalJson.profile_image}/>)}
                                 </div>

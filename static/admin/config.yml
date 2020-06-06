@@ -71,6 +71,21 @@ collections:
         create: true
         fields:
           - widget: object
+            name: metadata
+            label: Metadata
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: text
+                name: description
+                label: Description
+                required: true
+              - widget: image
+                name: image
+                label: Image
+          - widget: object
             name: prices
             label: Prices
             fields:
@@ -240,10 +255,17 @@ collections:
             name: metadata
             label: Metadata
             fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
               - widget: text
                 name: description
                 label: Description
                 required: true
+              - widget: image
+                name: image
+                label: Image
           - widget: object
             name: header
             label: Header
@@ -252,6 +274,69 @@ collections:
                 name: title
                 label: Title
                 required: true
+
+      - name: contact
+        label: Contact
+        file: _data/pages/contact-page/contact.json
+        create: true
+        fields:
+          - widget: object
+            name: metadata
+            label: Metadata
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: text
+                name: description
+                label: Description
+                required: true
+              - widget: image
+                name: image
+                label: Image
+
+      - name: reviews
+        label: Reviews
+        file: _data/pages/reviews-page/reviews.json
+        create: true
+        fields:
+          - widget: object
+            name: metadata
+            label: Metadata
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: text
+                name: description
+                label: Description
+                required: true
+              - widget: image
+                name: image
+                label: Image
+
+      - name: book
+        label: Book
+        file: _data/pages/book-page/book.json
+        create: true
+        fields:
+          - widget: object
+            name: metadata
+            label: Metadata
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: text
+                name: description
+                label: Description
+                required: true
+              - widget: image
+                name: image
+                label: Image
 
   - name: blog_categories
     label: Blog Categories

@@ -65,7 +65,6 @@ const IndexPage = () => {
                 <Layout>
                     <SEO title={data.homePageJson.metadata.title} description={data.homePageJson.metadata.description} image={data.homePageJson.metadata.image}/>
                     <Header
-                        className={"overflow-x-hidden"}
                         imageUrl={data.homePageJson.header.background_image}>
                         <Navigation/>
                         <Quote body={randomTestimonial.body} author={randomTestimonial.customer_name}/>
