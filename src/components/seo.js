@@ -2,8 +2,6 @@ import React from "react";
 import Helmet from "react-helmet";
 import {useStaticQuery} from "gatsby";
 import {useLocation} from "@reach/router";
-import WebFont from 'webfontloader';
-
 
 export default ({title, description, image, isArticle}) => {
     const {pathname} = useLocation()
@@ -14,7 +12,7 @@ export default ({title, description, image, isArticle}) => {
         titleTemplate,
         defaultDescription,
         siteUrl,
-        defaultImage,
+        defaultImage, p
     } = site.siteMetadata
 
     const seo = {
@@ -22,14 +20,6 @@ export default ({title, description, image, isArticle}) => {
         description: description || defaultDescription,
         image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname}`,
-    }
-
-    if (typeof window !== "undefined") {
-        WebFont.load({
-            google: {
-                families: ['Merriweather:400,700,400italic', 'Nunito Sans:600,900']
-            }
-        });
     }
 
     return (
@@ -62,12 +52,10 @@ export default ({title, description, image, isArticle}) => {
 
             <link rel="icon" href="favicon.svg"/>
 
-            <noscript>
-                <link rel={"stylesheet"}
-                      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"/>
-                <link rel={"stylesheet"}
-                      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"/>
-            </noscript>
+            <link rel={"stylesheet"}
+                  href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"/>
+            <link rel={"stylesheet"}
+                  href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"/>
         </Helmet>
     )
 

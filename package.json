@@ -23,6 +23,7 @@
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-plugin-sharp": "^2.6.10",
     "gatsby-plugin-sitemap": "^2.4.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-remark-images": "^3.3.9",
     "gatsby-remark-relative-images": "^0.3.0",
@@ -38,8 +39,7 @@
     "react-helmet": "^5.2.1",
     "react-leaflet": "^2.7.0",
     "react-leaflet-universal": "^2.2.1",
-    "tailwindcss": "^1.4.6",
-    "webfontloader": "^1.6.28"
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
