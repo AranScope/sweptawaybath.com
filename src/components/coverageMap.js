@@ -1,40 +1,24 @@
 import React from "react"
-import {GoogleApiWrapper, Circle, Map, Marker} from "google-maps-react";
-
-
-const mapStyles = {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    top: 0
-};
+import {Map, Circle, CircleMarker, Popup, TileLayer} from 'react-leaflet'
 
 const MapContainer = (props) => (
-    <div className="relative" style={{height: "40rem"}}>
-        <Map
-            style={mapStyles}
-            google={props.google}
-            zoom={9.5}
-            initialCenter={{
-                lat: 51.3811,
-                lng: -2.3590
-            }}
-        >
-            <Marker
-                name={'Bath'}
+    <>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+            crossOrigin=""
+        />
+        <Map className={"relative w-full"} style={{height: "40rem"}} center={[51.3811, -2.3590]} zoom={9.5}>
+            <TileLayer
+                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Circle
-                center={{
-                    lat: 51.3811,
-                    lng: -2.3590,
-                }}
-                radius={32186.9} strokeColor="#0000FF"
-                strokeOpacity={0.2} strokeWeight={1} fillColor="#0000FF"
-                fillOpacity={0.1}/>
+            <Circle center={[51.3811, -2.3590]} color="blue" fillColor="blue" fillOpacity={0.15} opacity={0.2} radius={28186.9}>
+                <Popup>Yes, we cover here!</Popup>
+            </Circle>
         </Map>
-    </div>
+    </>
 )
 
-export default GoogleApiWrapper({
-    apiKey: 'AIzaSyAqQUXUm5qhinRES52m3VK_fMeF5Fa_Ev0'
-})(MapContainer)
+export default MapContainer
