@@ -8,7 +8,14 @@ module.exports = {
     /* Your site config here */
     siteMetadata: require("./site-meta-data.json"),
     plugins: [
-        `gatsby-plugin-webpack-bundle-analyzer`,
+        {
+            resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+            options: {
+                analyzerPort: 3000,
+                production: true,
+                disable: false,
+            },
+        },
         'gatsby-plugin-robots-txt',
         `gatsby-plugin-postcss`,
         {
