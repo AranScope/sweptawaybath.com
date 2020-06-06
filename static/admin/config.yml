@@ -163,12 +163,20 @@ collections:
                 name: alert
                 label: Alert
                 fields:
+                  - widget: boolean
+                    name: enabled
+                    label: Enabled
+                    hint: Should the alert show up at all?
                   - widget: string
                     name: badge
                     label: Badge
                   - widget: string
                     name: text
                     label: Text
+                  - widget: string
+                    name: link
+                    label: Link
+                    hint: Link to another page on the site
               - widget: image
                 name: background_image
                 label: Background Image

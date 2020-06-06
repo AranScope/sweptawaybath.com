@@ -31,7 +31,7 @@ export default function Template({
                         <div className={"flex justify-center md:justify-start -my-6"}>
                             <a
                                 target={"_blank"}
-                                rel={"noreferrer"}
+                                rel={"noopener noreferrer"}
                                 href={`https://www.facebook.com/sharer/sharer.php?u=${location.href}`}
                                 className="flex items-center shadow-md bg-facebook hover:bg-blue-700 text-white py-2 px-6 mx-2">
                                 <span className={"font-bold text-2xl"}>f</span> <span className={"ml-4"}>SHARE</span>

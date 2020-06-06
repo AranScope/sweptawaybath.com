@@ -10,21 +10,10 @@ export const MenuContext = React.createContext({});
 export default ({children}) => {
     const [menuOpen, setMenuOpen] = useState(false)
 
-    const data = useStaticQuery(
-        graphql`
-            query {
-                site {
-                    siteMetadata {
-                        title
-                    }
-                }
-            }
-        `
-    )
     return (
         <MenuContext.Provider value={{menuOpen: menuOpen, setMenuOpen: setMenuOpen}}>
-            <div className={`site-wrapper ${menuOpen && 'fixed'}`}>
-                <Alert link={"/coronavirus"}/>
+            <div className={`site-wrapper w-screen ${menuOpen ? 'fixed': ''}`}>
+                <Alert/>
                 {children}
             </div>
             <Footer/>

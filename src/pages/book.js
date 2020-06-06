@@ -1,9 +1,7 @@
 import React from "react"
 import Helmet from 'react-helmet';
 import Layout from "../components/layout"
-import PostLink from "../components/post-link"
 import Navigation from "../components/navigation";
-import Quote from "../components/quote";
 import Header from "../components/header";
 import Section from "../components/indexSection"
 import {graphql, StaticQuery} from "gatsby";
@@ -55,9 +53,7 @@ const IndexPage = () => {
                     <div className={"block md:hidden relative"} style={{top: "1.6rem"}}>
                         <div className={"flex justify-center md:justify-start -my-6"}>
                             <a
-                                target={"_blank"}
-                                rel={"noreferrer"}
-                                href={"https://www.facebook.com/sharer/sharer.php?u=http://sweptawaybath.com"}
+                                href={"tel:01225483690"}
                                 className="flex items-center shadow-md bg-green-600 hover:bg-green-400 text-white py-2 px-6 mx-2">
                                 <span className={"font-bold text-2xl"}><Phone/></span> <span className={"ml-4"}>TAP TO CALL</span>
                             </a>

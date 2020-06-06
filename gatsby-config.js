@@ -111,6 +111,7 @@ module.exports = {
         `gatsby-plugin-netlify-cms`,
         // siteURL is a must for sitemap generation
         `gatsby-plugin-sitemap`,
+        `gatsby-plugin-preact`
         // `gatsby-plugin-offline`,
     ],
 }
