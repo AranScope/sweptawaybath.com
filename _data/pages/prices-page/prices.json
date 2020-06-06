@@ -1,15 +1,20 @@
 {
+  "metadata": {
+    "title": "The prices",
+    "description": "The prices",
+    "image": "/assets/Capture (1).jpg"
+  },
   "prices": {
     "regular-sweep": {
       "title": "Regular sweep",
-      "price": 55,
-      "description": "A single, regular sweep"
+      "description": "A single, regular sweep",
+      "price": 55
     },
     "everything-else-paid": [
       {
-        "price-type": "per-chimney",
         "title": "Camera survey",
         "description": "A full camera survey, including a certificate and all relevant images shared after completion.",
+        "price-type": "per-chimney",
         "price": 30
       },
       {
@@ -20,9 +25,9 @@
       },
       {
         "title": "Nest removal",
+        "description": "Most nest removal is completed within a single hour.",
         "price-type": "per-hour",
-        "price": 30,
-        "description": "Most nest removal is completed within a single hour."
+        "price": 30
       }
     ],
     "everything-else-free": [
