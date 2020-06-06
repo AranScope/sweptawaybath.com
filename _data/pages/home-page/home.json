@@ -6,8 +6,10 @@
   },
   "header": {
     "alert": {
+      "enabled": true,
       "badge": "NEW",
-      "text": "Now qualified in infection control and prevention"
+      "text": "Now qualified in infection control and prevention",
+      "link": "/coronavirus"
     },
     "background_image": "/assets/SQS_DK_carlos_0226-e (2)-min (1).jpg"
   },
