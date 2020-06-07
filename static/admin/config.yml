@@ -458,7 +458,6 @@ collections:
     folder: _data/testimonials
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true
-    extension: json
     fields:
       - label: When did the customer leave the review?
         name: date

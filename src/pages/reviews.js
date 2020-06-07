@@ -24,7 +24,7 @@ export default () => (
                     <div className="container mx-auto my-6">
 
                         {
-                            data.allTestimonialsJson.edges.map(e => e.node).map(review => (
+                            data.allMarkdownRemark.edges.map(e => e.node).map(review => (
                                 <>
                                     <Review review={review}/>
                                 </>
@@ -40,15 +40,17 @@ export default () => (
 
 const pageQuery = graphql`
     query reviewsPageQuery {
-        allTestimonialsJson(sort: { order: DESC, fields: [date] }) {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: {fileAbsolutePath: {regex: "/testimonials/"}, frontmatter: {}}) {
             edges {
                 node {
-                    customer_name
-                    date(formatString: "MMM, YYYY")
-                    link
-                    body
-                    featured
-                    stars
+                    html
+                    frontmatter {
+                        date(formatString: "MMMM, YYYY")
+                        customer_name
+                        featured
+                        stars
+                        link
+                    }
                 }
             }
         }

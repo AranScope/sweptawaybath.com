@@ -41,14 +41,17 @@ const pageQuery = graphql`
             }
         }
 
-        allTestimonialsJson {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: {fileAbsolutePath: {regex: "/testimonials/"}, frontmatter: {}}) {
             edges {
                 node {
-                    customer_name
-                    date
-                    link
-                    body
-                    featured
+                    html
+                    frontmatter {
+                        date
+                        customer_name
+                        featured
+                        stars
+                        link
+                    }
                 }
             }
         }
@@ -58,7 +61,7 @@ const pageQuery = graphql`
 const IndexPage = () => {
     return (
         <StaticQuery query={pageQuery} render={data => {
-            let testimonials = data.allTestimonialsJson.edges.map(e => e.node).filter(t => t.featured)
+            let testimonials = data.allMarkdownRemark.edges.map(e => e.node).filter(t => t.frontmatter.featured)
             let i = Math.floor(Math.random() * testimonials.length)
             let randomTestimonial = testimonials[i]
 
@@ -70,7 +73,7 @@ const IndexPage = () => {
                     <Header
                         imageUrl={data.homePageJson.header.background_image}>
                         <Navigation/>
-                        <Quote body={randomTestimonial.body} author={randomTestimonial.customer_name}/>
+                        <Quote body={randomTestimonial.html} author={randomTestimonial.frontmatter.customer_name}/>
                     </Header>
 
                     <Container>

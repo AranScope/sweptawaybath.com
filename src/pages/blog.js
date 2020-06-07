@@ -77,13 +77,13 @@ const pageQuery = graphql`
             }
         }
             
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: {fileAbsolutePath: {regex: "/blog/"}}) {
             edges {
                 node {
                     id
                     excerpt(pruneLength: 250)
                     frontmatter {
-                        date(formatString: "MMM, YYYY")
+                        date(formatString: "MMMM, YYYY")
                         path
                         title
                         thumbnail

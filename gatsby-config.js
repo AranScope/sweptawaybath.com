@@ -17,6 +17,13 @@ module.exports = {
                 path: `${__dirname}/_data/blog`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `testimonials`,
+                path: `${__dirname}/_data/testimonials`,
+            },
+        },
         `gatsby-transformer-json`,
         {
             resolve: `gatsby-source-filesystem`,
