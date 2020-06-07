@@ -481,3 +481,8 @@ collections:
         widget: boolean
         default: false
         hint: It's best to feature short reviews e.g. one sentence, so they don't take up too much space on the home page
+      - label: How many stars (0-5)?
+        name: stars
+        widget: number
+        min: 0
+        max: 5

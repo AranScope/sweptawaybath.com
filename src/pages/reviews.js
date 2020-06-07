@@ -48,6 +48,7 @@ const pageQuery = graphql`
                     link
                     body
                     featured
+                    stars
                 }
             }
         }
