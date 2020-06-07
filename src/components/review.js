@@ -18,8 +18,8 @@ export default ({review}) => (
                      dangerouslySetInnerHTML={{__html: review.html}}/>
                 <div className="flex justify-between mt-8">
                     <div>
-                        <p className="text-gray-600">{review.frontmatter.customer_name},</p>
-                        <p className="text-gray-600">{review.frontmatter.date}.</p>
+                        <p className="text-gray-600">{review.frontmatter.customer_name}</p>
+                        <p className="text-gray-600">{review.frontmatter.date}</p>
                     </div>
                     <div className="flex text-gray-500 items-center">
                         <svg className="hidden md:block" style={{minHeight: "1rem", minWidth: "1rem"}}
