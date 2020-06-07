@@ -1,13 +1,6 @@
 import React from "react"
 import {Link} from "gatsby"
 
-
-//                    customer_name
-//                     date
-//                     link
-//                     body
-//                     featured
-
 export default ({review}) => (
     <div className="p-8">
         <div className={"flex"}>

@@ -42,7 +42,7 @@ export default () => (
 
 const pageQuery = graphql`
     query reviewsPageQuery {
-        allTestimonialsJson {
+        allTestimonialsJson(sort: { order: DESC, fields: [date] }) {
             edges {
                 node {
                     customer_name
