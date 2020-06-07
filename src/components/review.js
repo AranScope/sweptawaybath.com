@@ -17,8 +17,11 @@ export default ({review}) => (
                 <div className="card-body-text font-light italic leading-relaxed text-gray-900 mb-8 text-xl"
                      dangerouslySetInnerHTML={{__html: review.html}}/>
                 <div className="flex justify-between mt-8">
-                    <p className="text-gray-600">{review.frontmatter.customer_name} - {review.frontmatter.date}</p>
-                    <div className="flex text-gray-500">
+                    <div>
+                        <p className="text-gray-600">{review.frontmatter.customer_name},</p>
+                        <p className="text-gray-600">{review.frontmatter.date}.</p>
+                    </div>
+                    <div className="flex text-gray-500 items-center">
                         <svg className="hidden md:block" style={{minHeight: "1rem", minWidth: "1rem"}}
                              fill="currentColor"
                              viewBox="0 0 20 20">
