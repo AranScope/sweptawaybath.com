@@ -6,7 +6,7 @@ import StarRating from "./starRating"
 // each para spaced by mb-6
 
 export default ({review}) => (
-    <div className="border-l-8 border-purple-muted w-full max-w-2xl shadow-md mb-10">
+    <div className="border-l-8 border-purple-muted w-full max-w-2xl shadow-md mb-10 bg-white">
 
         <div className="p-12 md:pl-0 flex min-w-full">
             <p className="hidden md:block font-sans leading-none min-h-full text-gray-200 px-4 -mt-8"

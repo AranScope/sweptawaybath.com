@@ -11,8 +11,9 @@ import SEO from "../components/seo";
 export default () => (
     <StaticQuery query={pageQuery} render={data => {
         return (
-            <Layout>
-                <SEO title={data.reviewsPageJson.metadata.title} description={data.reviewsPageJson.metadata.description}
+            <Layout className={"bg-gray-100"}>
+                <SEO title={data.reviewsPageJson.metadata.title}
+                     description={data.reviewsPageJson.metadata.description}
                      image={data.reviewsPageJson.metadata.image}/>
                 <Header
                     imageUrl={data.reviewsPageJson.header.background_image}>
