@@ -466,7 +466,7 @@ collections:
         hint: If you don't know, guess, or leave it blank
       - label: What did the customer say?
         name: body
-        widget: text
+        widget: markdown
         required: true
       - label: What is the customer's name?
         name: customer-name

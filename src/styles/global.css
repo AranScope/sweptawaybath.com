@@ -178,14 +178,14 @@ body {
     z-index: 1;
 }
 
-/*#mobile-nav {*/
-/*    transition: opacity 1s ease, transform 1s ease;*/
-/*    position: fixed; !* Stay in place *!*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*    z-index: 1; !* Sit on top *!*/
+.card-body-text {
+    /*font-family: 'Merriweather'*/
+}
 
+.card-body-text p {
+    @apply mb-6;
+}
 
-
-/*    opacity: 1;*/
-/*}*/
+.card-body-text strong {
+    @apply font-bold;
+}

@@ -1,26 +1,40 @@
 import React from "react"
+import ReactMarkdown from "react-markdown"
 import StarRating from "./starRating"
 
+
+// each para spaced by mb-6
+
 export default ({review}) => (
-    <div className="px-4 py-8 md:px-8">
-        <div className={"flex"}>
-            <div className={"hidden md:block mr-3"}>
-                <p className={"font-serif text-transparent text-6xl text-stroke"} style={{fontSize: "12rem"}}>“</p>
-            </div>
-            <div className={"block w-full"}>
-                <p className="text-gray-700 text-3xl mb-8">{review.body}</p>
-                <p className="text-gray-600 font-serif text-xl md:text-2xl">{review.customer_name} - {review.date}</p>
-                <div className={"flex justify-center py-8"}>
+    <div className="border-l-8 border-purple-muted w-full max-w-2xl shadow-md mb-10">
+
+        <div className="p-12 md:pl-0 flex min-w-full">
+            <p className="hidden md:block font-sans leading-none min-h-full text-gray-200 px-4 -mt-8"
+               style={{fontSize: "11rem"}}>
+                “
+            </p>
+
+            <div className="font-serif-merriweather">
+                <ReactMarkdown className="card-body-text font-light italic leading-relaxed text-gray-900 mb-8 text-xl"
+                               source={review.body}/>
+                <div className="flex justify-between mt-8">
+                    <p className="text-gray-600">{review.customer_name} - {review.date}</p>
+                    <div className="flex text-gray-500">
+                        <svg className="hidden md:block" style="min-height: 1rem; min-width: 1rem;" fill="currentColor"
+                             viewBox="0 0 20 20">
+                            <path
+                                d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                            <path
+                                d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                        </svg>
+                        <a href={review.link}>Open in Google</a>
+                    </div>
+                </div>
+                <div className={"pt-2"}>
                     <StarRating stars={review.stars}/>
                 </div>
-                <div className={"flex items-center text-gray-600"}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                         width="24" height="24">
-                        <path className="fill-current"
-                              d="M19.48 13.03A4 4 0 0 1 16 19h-4a4 4 0 1 1 0-8h1a1 1 0 0 0 0-2h-1a6 6 0 1 0 0 12h4a6 6 0 0 0 5.21-8.98L21.2 12a1 1 0 1 0-1.72 1.03zM4.52 10.97A4 4 0 0 1 8 5h4a4 4 0 1 1 0 8h-1a1 1 0 0 0 0 2h1a6 6 0 1 0 0-12H8a6 6 0 0 0-5.21 8.98l.01.02a1 1 0 1 0 1.72-1.03z"/>
-                    </svg>
-                    <a className={"text-center text-xl"} href={review.link}>View in Google</a>
-                </div>
+            </div>
+            <div>
             </div>
         </div>
     </div>

@@ -26,7 +26,6 @@ export default () => (
                             data.allTestimonialsJson.edges.map(e => e.node).map(review => (
                                 <>
                                     <Review review={review}/>
-                                    <hr/>
                                 </>
                             ))
                         }
