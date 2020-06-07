@@ -31,7 +31,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 	rsp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		return handleError(string("request failed")), nil
-	}:wq:
+	}
 
 	bodyBytes, err := ioutil.ReadAll(rsp.Body)
 	if err != nil {
