@@ -10,7 +10,7 @@ const MapContainer = (props) => (
             integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
             crossOrigin=""
         />
-        <Map dragging={!isMobile} className={"relative w-full"} style={{height: "40rem"}} center={[51.3811, -2.3590]} zoom={9.5}>
+        <Map dragging={!isMobile} tap={!isMobile} className={"relative w-full"} style={{height: "40rem"}} center={[51.3811, -2.3590]} zoom={9.5}>
             <TileLayer
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
