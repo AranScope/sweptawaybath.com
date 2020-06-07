@@ -8,6 +8,7 @@ import {graphql, StaticQuery} from "gatsby";
 import Container from "../components/container";
 import SEO from "../components/seo"
 import "../styles/global.css"
+import Alert from "../components/alert";
 
 const pageQuery = graphql`
     query indexPageQuery {
@@ -63,7 +64,9 @@ const IndexPage = () => {
 
             return (
                 <Layout>
-                    <SEO title={data.homePageJson.metadata.title} description={data.homePageJson.metadata.description} image={data.homePageJson.metadata.image}/>
+                    <SEO title={data.homePageJson.metadata.title} description={data.homePageJson.metadata.description}
+                         image={data.homePageJson.metadata.image}/>
+                    <Alert/>
                     <Header
                         imageUrl={data.homePageJson.header.background_image}>
                         <Navigation/>

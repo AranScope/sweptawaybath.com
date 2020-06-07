@@ -1,5 +1,5 @@
 import React from "react"
-import {Map, Circle, CircleMarker, Popup, TileLayer} from 'react-leaflet-universal'
+import {Circle, Map, Popup, TileLayer} from 'react-leaflet-universal'
 import {isMobile} from 'react-device-detect';
 
 const MapContainer = (props) => (
