@@ -468,7 +468,7 @@ collections:
         widget: markdown
         required: true
       - label: What is the customer's name?
-        name: customer-name
+        name: customer_name
         widget: string
         required: true
       - label: Link to the review

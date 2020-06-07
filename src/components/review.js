@@ -1,5 +1,5 @@
 import React from "react"
-import StarRating from "./starRating"
+import StarRating from "../components/starRating"
 
 
 // each para spaced by mb-6
@@ -19,7 +19,8 @@ export default ({review}) => (
                 <div className="flex justify-between mt-8">
                     <p className="text-gray-600">{review.frontmatter.customer_name} - {review.frontmatter.date}</p>
                     <div className="flex text-gray-500">
-                        <svg className="hidden md:block" style="min-height: 1rem; min-width: 1rem;" fill="currentColor"
+                        <svg className="hidden md:block" style={{minHeight: "1rem", minWidth: "1rem"}}
+                             fill="currentColor"
                              viewBox="0 0 20 20">
                             <path
                                 d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>

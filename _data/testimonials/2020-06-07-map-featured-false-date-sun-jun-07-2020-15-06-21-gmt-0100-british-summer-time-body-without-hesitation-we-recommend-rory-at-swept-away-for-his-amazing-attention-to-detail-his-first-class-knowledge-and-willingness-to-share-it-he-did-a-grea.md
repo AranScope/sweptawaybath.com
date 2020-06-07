@@ -1,6 +1,6 @@
 ---
 date: 2020-06-07T14:06:21.941Z
-customer-name: Pauleen Hyland
+customer_name: Pauleen Hyland
 link: https://plus.google.com/u/0/b/118011763437186535434/112808785185810257923/reviews
 featured: false
 stars: 4
