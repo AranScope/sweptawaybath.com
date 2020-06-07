@@ -56,10 +56,6 @@ export default ({title, description, image, isArticle}) => {
                   href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"/>
             <link rel={"stylesheet"}
                   href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"/>
-
-            <script defer type="text/javascript"
-                    src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
         </Helmet>
     )
 
