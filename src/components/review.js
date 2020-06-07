@@ -1,29 +1,29 @@
 import React from "react"
 import {Link} from "gatsby"
 
+
+//                    customer_name
+//                     date
+//                     link
+//                     body
+//                     featured
+
 export default ({review}) => (
-    <Link to={review.link}>
-        {/*<div className="max-w-sm w-full lg:max-w-full lg:flex mb-6 md:mb-0">*/}
-        {/*    <div*/}
-        {/*        className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"*/}
-        {/*        style={{backgroundImage: `url('${post.frontmatter.thumbnail || "https://images.squarespace-cdn.com/content/56ec101db09f95da37e77918/1458317460088-Z27X14MAB5X7CAC0DBOG/SQS_DK_carlos_0226-e.jpg?format=2500w&content-type=image%2Fjpeg"}')`}}>*/}
-        {/*    </div>*/}
-        {/*    <div*/}
-        {/*        className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">*/}
-        {/*        <div className="mb-8">*/}
-        {/*            <div className="text-gray-900 font-bold text-xl mb-2">{post.frontmatter.title}</div>*/}
-        {/*            <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.*/}
-        {/*                Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>*/}
-        {/*        </div>*/}
-        {/*        <div className="flex items-center">*/}
-        {/*            <img*/}
-        {/*                className="w-10 h-10 rounded-full mr-4" src={authorImage.image} alt={authorImage.alt}/>*/}
-        {/*            <div className="text-sm">*/}
-        {/*                <p className="text-gray-900 leading-none">{authorName}</p>*/}
-        {/*                <p className="text-gray-600">{post.frontmatter.date}</p>*/}
-        {/*            </div>*/}
-        {/*        </div>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
-    </Link>
+    <div className="p-8">
+        <div className={"flex"}>
+            <div className={"hidden md:block"}>
+                <p className={"font-serif text-transparent text-6xl text-stroke"} style={{fontSize: "12rem"}}>“</p>
+            </div>
+            <div className={"block"}>
+                <p className="text-gray-700 text-center text-3xl md:text-3xl mb-8">{review.body}</p>
+                <p className="text-gray-600 font-serif text-center text-xl md:text-2xl mb-8">{review.customer_name} - {review.date}</p>
+                <div className={"flex items-center text-gray-600"}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                         width="24" height="24"><path className="fill-current"
+                                                      d="M19.48 13.03A4 4 0 0 1 16 19h-4a4 4 0 1 1 0-8h1a1 1 0 0 0 0-2h-1a6 6 0 1 0 0 12h4a6 6 0 0 0 5.21-8.98L21.2 12a1 1 0 1 0-1.72 1.03zM4.52 10.97A4 4 0 0 1 8 5h4a4 4 0 1 1 0 8h-1a1 1 0 0 0 0 2h1a6 6 0 1 0 0-12H8a6 6 0 0 0-5.21 8.98l.01.02a1 1 0 1 0 1.72-1.03z"/></svg>
+                    <a className={"text-center text-xl"} href={"google.com"}>View in Google</a>
+                </div>
+            </div>
+        </div>
+    </div>
 )

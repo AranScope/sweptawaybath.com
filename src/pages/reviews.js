@@ -12,18 +12,22 @@ export default () => (
     <StaticQuery query={pageQuery} render={data => {
         return (
             <Layout>
-                <SEO title={data.reviewsPageJson.metadata.title} description={data.reviewsPageJson.metadata.description} image={data.reviewsPageJson.metadata.image}/>
+                <SEO title={data.reviewsPageJson.metadata.title} description={data.reviewsPageJson.metadata.description}
+                     image={data.reviewsPageJson.metadata.image}/>
                 <Header
                     imageUrl={data.reviewsPageJson.header.background_image}>
                     <Navigation/>
                     <HeaderTitle>{data.reviewsPageJson.header.title}</HeaderTitle>
                 </Header>
                 <Container>
-                    <div className="container mx-auto md:grid md:grid-cols-2 md:gap-6 my-6">
+                    <div className="container mx-auto my-6">
 
                         {
                             data.allTestimonialsJson.edges.map(e => e.node).map(review => (
-                                <Review review={review}/>
+                                <>
+                                    <Review review={review}/>
+                                    <hr/>
+                                </>
                             ))
                         }
                     </div>
@@ -42,7 +46,7 @@ const pageQuery = graphql`
             edges {
                 node {
                     customer_name
-                    date
+                    date(formatString: "MMM, YYYY")
                     link
                     body
                     featured
