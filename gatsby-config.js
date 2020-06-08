@@ -96,10 +96,16 @@ module.exports = {
             }
         },
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-netlify-cms`,
+        {
+            resolve: 'gatsby-plugin-netlify-cms',
+            options: {
+                modulePath: `${__dirname}/src/cms/cms.js`,
+            },
+        },
         // siteURL is a must for sitemap generation
         `gatsby-plugin-sitemap`,
         `gatsby-plugin-preact`,
         // `gatsby-plugin-offline`,
+        'gatsby-plugin-netlify', // make sure to keep it last in the array
     ],
 }
