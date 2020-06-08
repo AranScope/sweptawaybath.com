@@ -438,6 +438,7 @@ collections:
         hint: "Path must start with /"
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: summary, label: Summary, widget: text, hint: A 1-2 line summary of the post}
       - label: Meta Description
         name: metaDescription
         widget: text
