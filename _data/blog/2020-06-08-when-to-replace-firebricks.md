@@ -4,6 +4,9 @@ category: Maintenance
 path: /when-to-replace-firebricks
 date: 2020-06-08T16:27:40.824Z
 title: When to replace firebricks
+summary: >-
+  A short tutorial to help you know when to replace your firebricks, and when
+  they still have some life left.
 metaDescription: Your Chimney Sweep shows you when to replace fire bricks.
 thumbnail: /assets/Chimney-sweep-when-to-replace-fire-brick.jpg
 ---
