@@ -12,10 +12,13 @@ The following method is one I have used successfully on many types of wood burne
 
 1. Materials :
 
+![Two logs, some newspaper and two hand-fulls of kindling](/assets/lighting-a-wood-burner-materials.jpg "Two logs, some newspaper and two hand-fulls of kindling")
+
+
+
 How to light a wood burner
 
 Two well seasoned not too big logs for the base. Lots of scrunched up newspaper. Two hand fulls of kindling. Two smaller logs for the top.
-
 
 2. The upside down fire
 
