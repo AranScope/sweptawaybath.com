@@ -12,15 +12,14 @@ export default ({post, authorName, authorImage}) => (
                 className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                 <div className="mb-8">
                     <div className="text-gray-900 font-bold text-xl mb-2">{post.frontmatter.title}</div>
-                    <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+                    <p className="text-gray-700 text-base">{post.frontmatter.summary}</p>
                 </div>
                 <div className="flex items-center">
                     <img
                         className="w-10 h-10 rounded-full mr-4" src={authorImage.image} alt={authorImage.alt}/>
                     <div className="text-sm">
                         <p className="text-gray-900 leading-none">{authorName}</p>
-                        <p className="text-gray-700">{post.frontmatter.date}</p>
+                        <p className="text-gray-700">{new Date(post.frontmatter.date).toLocaleString('default', {day: 'numeric', month: 'long', year: 'numeric'})}</p>
                     </div>
                 </div>
             </div>

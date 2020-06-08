@@ -1,5 +1,4 @@
 import React from "react"
-import Helmet from "react-helmet"
 import {graphql, StaticQuery} from 'gatsby'
 import Layout from "../components/layout"
 import Navigation from "../components/navigation"
@@ -26,8 +25,9 @@ function groupByCategory(posts) {
 
     return Object.entries(postsByCategory).map(([category, posts]) => ({
         category: category,
-        posts: posts
-    })).sort((a, b) => a.category.localeCompare(b.category))
+        posts: posts,
+        newestPostDate: posts.map(p => new Date(p.frontmatter.date)).sort((a, b) => a > b)[0],
+    })).sort((a, b) => b.date - a.date)
 }
 
 export default () => (
@@ -50,8 +50,8 @@ export default () => (
                     {
                         groupedByCategory.map(group => (
                             <section key={group.category}>
-                                <h1 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold">{group.category}</h1>
-                                <div className="container mx-auto md:grid md:grid-cols-2 md:gap-6 my-6">
+                                <h2 className="text-gray-900 text-3xl md:text-5xl leading-tight font-extrabold">{group.category}</h2>
+                                <div className="container mx-auto md:grid md:grid-cols-2 md:gap-6 mt-6 mb-12">
                                     {group.posts.map(post => <PostLink key={post.id} post={post} authorName={data.personalJson.first_name} authorImage={data.personalJson.profile_image}/>)}
                                 </div>
                             </section>
@@ -83,9 +83,10 @@ const pageQuery = graphql`
                     id
                     excerpt(pruneLength: 250)
                     frontmatter {
-                        date(formatString: "MMMM, YYYY")
+                        date
                         path
                         title
+                        summary
                         thumbnail
                         category
                     }

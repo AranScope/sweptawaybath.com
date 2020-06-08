@@ -4,6 +4,7 @@ category: Day to Day
 path: /smokeless-coal-fire
 date: 2020-05-29T16:42:57.192Z
 title: How to light a smokeless coal fire
+summary: How to light a smokeless coal fire
 metaDescription: ''
 thumbnail: /assets/how-to-light-a-smokeless-fire-materials.jpg
 ---

@@ -4,6 +4,9 @@ category: Coronavirus
 path: /coronavirus
 date: 2020-05-29T16:42:57.192Z
 title: How we're reacting to the Coronavirus
+summary: >-
+  A short tutorial to help you know when to replace your firebricks, and when
+  they still have some life left.
 metaDescription: ""
 thumbnail: null
 ---

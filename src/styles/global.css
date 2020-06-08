@@ -64,6 +64,10 @@ body {
     .blog-post-content p, .blog-post-content li, .blog-post-content a {
         @apply text-2xl;
     }
+
+    .blog-post-content img {
+        @apply w-1/2 !important;
+    }
 }
 
 .blog-post-content a {
@@ -89,9 +93,12 @@ body {
 
 .blog-post-content img {
     @apply block;
+    @apply w-4/5;
+    @apply border-8;
+    @apply border-gray-100;
+    @apply shadow-lg;
     @apply mx-auto;
 }
-
 
 .blog-post-content blockquote {
     @apply bg-gray-100;
@@ -115,7 +122,7 @@ body {
     left: 1rem;
     font-size: 12rem;
     content: '“';
-    color: rgba(255, 136, 0, 0.1);
+    color: rgba(0, 0, 0, 0.1);
     line-height: 1ch;
     z-index: 2;
 }
